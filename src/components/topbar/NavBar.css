@@ -42,9 +42,6 @@ main{
 .header-toggle{
   font-size: 1.25rem;
   cursor:pointer;
-  color:greenyellow; 
-  
- 
   padding: 0rem 0 0rem 0 ;
   
 }
@@ -89,11 +86,11 @@ main{
 }
 .nav-link:hover{
   color:greenyellow;
-  background-color:#20d22b;
+  background-color:#00f000;
 }
 .active{
   color:rgb(248, 249, 248);
-  background-color:#20d22b;
+  background-color:#00f000;
 }
 .active::before{
   content: "";
@@ -118,33 +115,40 @@ text-align: center;
 }
 /*  gfghfdg*/
 .topbarlogo{
-  color:#20d22b;
+  color:#00f000;
   
+}
+.topbarlogo1{
+  color:#00f000;
+  margin-right: 15px;
+
 }
 .logo {
   font-weight:normal;
   font-size: 20px;
   color:white;
-  cursor: pointer;
+  margin-left: 15px;
+}
+.logo1{
+  font-size: 15px;
+
 }
 
 .topRight {
   display: flex;
   align-items: center;
+ 
 }
 .topbarIcon{
-  justify-content: space-between;
-  cursor: pointer;
-  color:white;
-
-  margin-right: 30px;
+color:white;
+margin-right: 30px;
+margin-left: 30px;
 }
 
 .topbarIconContainer {
   position: relative;
   color: #bababa;
   cursor: pointer;
-  margin-right: 10px;
 }
 
 

@@ -1,8 +1,3 @@
-
-
-
-
-
 .configTitleContainer{
   background-color: rgb(49, 47, 47);
 box-sizing: 20px;
@@ -10,4 +5,9 @@ box-sizing: 20px;
   margin-top: -10px;
   height: 4rem;
 padding: 20px;
+}
+.configTitle{
+  border-bottom: 3px solid #00f000;
+width: 145px;
+padding-bottom: 10px;
 }

@@ -1,5 +1,4 @@
 
-
 .auditTitleContainer{
   background-color: rgb(49, 47, 47);
 box-sizing: 20px;
@@ -7,4 +6,9 @@ box-sizing: 20px;
   margin-top: -10px;
   height: 4rem;
 padding: 20px;
+}
+.auditTitle{
+  border-bottom: 3px solid #00f000;
+width: 95px;
+padding-bottom: 10px;
 }

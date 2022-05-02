@@ -6,3 +6,8 @@ box-sizing: 20px;
   height: 4rem;
 padding: 20px;
 }
+.clusterTitle{
+  border-bottom: 3px solid #00f000;
+width: 90px;
+padding-bottom: 10px;
+}

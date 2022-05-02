@@ -6,6 +6,11 @@ box-sizing: 20px;
   height: 4rem;
 padding: 20px;
 }
+.reviewTitle{
+  border-bottom: 3px solid #00f000;
+width: 135px;
+padding-bottom: 10px;
+}
 .content_1{
   float: left;
   margin-top: 10px;

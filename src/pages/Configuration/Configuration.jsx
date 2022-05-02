@@ -8,6 +8,7 @@ export default function Configuration() {
     <div >
     <div className="configTitleContainer">
         <h2 >Configuration</h2>
+        <h3 className="configTitle"/>
         </div>
         <div >
         

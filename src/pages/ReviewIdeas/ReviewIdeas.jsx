@@ -1,13 +1,13 @@
-import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from '@material-ui/icons'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "./ReviewUsers.css"
 
-export default function ReviewUsers() {
+import React from 'react'
+import "./ReviewIdeas.css"
+
+export default function ReviewIdeas() {
   return (
     <div >
     <div className="reviewTitleContainer">
-        <h2 >Review Users</h2>
+        <h2 >Review Ideas</h2>
+        <h3 className="reviewTitle"/>
         </div>
         <div >
         <div className="content_1">
