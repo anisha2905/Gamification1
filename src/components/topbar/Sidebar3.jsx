@@ -1,6 +1,6 @@
 
 import { Link ,Routes,Route} from 'react-router-dom'
-import { AttachMoney, BarChart, PermIdentity, Storefront, DehazeOutlined,AspectRatioSharp, DehazeRounded} from '@material-ui/icons'
+import { AttachMoney, BarChart, PermIdentity, Storefront, DehazeOutlined,AspectRatioSharp, DehazeRounded, AccountTreeOutlined} from '@material-ui/icons'
 
 import React,{useState} from 'react'
 import "./topbar1.css"
@@ -20,12 +20,16 @@ function Sidebar3() {
   return (
       <main className={show ? 'space-toggle' : null}>
           <header className='header'>
-          <div className='topLeft header-toggle' onClick={() => setShow(!show)}>
+          <div className='header-toggle' onClick={() => setShow(!show)}>
                 <DehazeOutlined className='topbarIcon'/>
+                <AccountTreeOutlined className='topbarlogo'/>
+              <span className="logo ">Gamification</span>
+               
+                </div>
             
-                <span className="logo">Gamification</span>
-            </div>
-            <div className="sidebarMenu"></div>
+          
+            
+           
             <div className="topRight">
                 <div className="topbarIconContainer">
                     <Settings/>
