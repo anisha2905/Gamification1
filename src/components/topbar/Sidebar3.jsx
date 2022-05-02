@@ -1,6 +1,6 @@
 
 import { Link ,Routes,Route} from 'react-router-dom'
-import { AttachMoney, BarChart, PermIdentity, Storefront, DehazeOutlined,AspectRatioSharp, DehazeRounded, AccountTreeOutlined} from '@material-ui/icons'
+import { AttachMoney, BarChart, PermIdentity, Storefront, DehazeOutlined, AccountTreeOutlined} from '@material-ui/icons'
 
 import React,{useState} from 'react'
 import "./topbar1.css"
@@ -9,7 +9,7 @@ import Clusters from '../../pages/Clusters/Clusters';
 import Configuration from '../../pages/Configuration/Configuration';
 import Auditors from '../../pages/Auditors/Auditors';
 import AddNews from '../../pages/AddNews/AddNews';
-import { Language, NotificationsNone, Reorder, Settings } from '@material-ui/icons'
+import { Settings } from '@material-ui/icons'
 
 
 
