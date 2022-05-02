@@ -1,6 +1,6 @@
 
 import { Link ,Routes,Route} from 'react-router-dom'
-import { AttachMoney, BarChart, PermIdentity, Storefront,Reorder} from '@material-ui/icons'
+import { AttachMoney, BarChart, PermIdentity, Storefront, DehazeOutlined,AspectRatioSharp, DehazeRounded} from '@material-ui/icons'
 
 import React,{useState} from 'react'
 import "./topbar1.css"
@@ -9,6 +9,9 @@ import Clusters from '../../pages/Clusters/Clusters';
 import Configuration from '../../pages/Configuration/Configuration';
 import Auditors from '../../pages/Auditors/Auditors';
 import AddNews from '../../pages/AddNews/AddNews';
+import { Language, NotificationsNone, Reorder, Settings } from '@material-ui/icons'
+
+
 
 function Sidebar3() {
 
@@ -16,13 +19,20 @@ function Sidebar3() {
     
   return (
       <main className={show ? 'space-toggle' : null}>
-          <header className='header space-toggle'>
-
-              <div className='header-toggle' onClick={() => setShow(!show)} >
-              <Reorder/>
-              <span className='header-link'>Gamification</span>
-
-              </div>
+          <header className='header'>
+          <div className='topLeft header-toggle' onClick={() => setShow(!show)}>
+                <DehazeOutlined className='topbarIcon'/>
+            
+                <span className="logo">Gamification</span>
+            </div>
+            <div className="sidebarMenu"></div>
+            <div className="topRight">
+                <div className="topbarIconContainer">
+                    <Settings/>
+                    
+                </div>
+                
+            </div> 
           </header>
           <aside  className={`sidebar ${show ? 'show':null}`}>
               <nav className='nav'>

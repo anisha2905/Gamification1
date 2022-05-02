@@ -1,5 +1,5 @@
 :root{
-  --header-height:1rem;
+  --header-height:2.5rem;
   --nav-width:68px;
   --first-color:#0e0d0d;
   --first-color-alt:#0a090a;
@@ -43,10 +43,13 @@ main{
   font-size: 1.25rem;
   cursor:pointer;
   color:greenyellow; 
+  
+ 
+  padding: 0rem 0 0rem 0 ;
+  
 }
 .sidebar{
   position: fixed;
-  top: 0;
   left:-30%;
   height: 100vh;
   width: var(--nav-width);
@@ -65,7 +68,7 @@ main{
   display: grid;
   grid-template-columns: max-content max-content;
   column-gap: 2rem;
-  padding:.5rem 0 0.5rem .5rem ;
+  padding: 0.5rem 0 0.5rem .5rem ;
 }
 .nav-logo{
   margin-bottom: 2rem;
@@ -108,28 +111,59 @@ main{
 .space-toggle{
   padding-left: calc(var(--nav-width) + 1rem);
 }
+.header-link-icon{
+text-align: center;
+}
 .header-link{ 
   justify-content: space-between;
 }
+/*  gfghfdg*/
+.logo {
+  font-weight:normal;
+  font-size: 22px;
+  color:white;
+  cursor: pointer;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+}
+.topbarIcon{
+  justify-content: space-between;
+  cursor: pointer;
+  color:white;
+
+  margin-right: 30px;
+}
+
+.topbarIconContainer {
+  position: relative;
+  color: #bababa;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+
+ /* fgfyhgjg */
 @media screen and (min-width:768px){
   main{
-    margin:calc(var(--header-height) + 1rem) 0 0 0;
+    margin:calc(var(--header-height) + 0rem) 0 0 0;
     padding: 0 0rem 0 calc(var(--nav-width) + 0rem);
 
   }
-
 .header{
-  height: calc(var(--header-heigth) + 1rem);
-  padding-left:calc(var(--nav-width)+ 2rem);
+  padding-left:calc(var(--nav-width)+ 1rem);
   }
   .sidebar{
     left: 0;
-    padding: 1rem 0 0 0;
+    margin: 0 0 0 0;
   }
   .show{
     width: calc(var(--header-height) + 176px);
   }
   .space-toggle{
-    padding-left: calc(var(--nav-width) + 115px);
+    padding-left: calc(var(--nav-width) + 145px);
   }
 }
