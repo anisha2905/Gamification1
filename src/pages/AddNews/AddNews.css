@@ -10,3 +10,54 @@
   height: 4rem;
 padding: 20px;
 }
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#laptop_icon{
+  width: 2.6rem; 
+  margin-left: 1rem;
+}
+#mobile_icon{
+  width: 2.6rem; 
+  margin-left: 1rem;
+}
+
+.addnews{
+  padding-top: 0.375rem;
+  padding-right: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.375rem;
+  flex-wrap: wrap;
+  display: flex;
+  flex-grow:1;
+  flex-direction: column;
+  width: 35rem;
+}
+.titles{
+  color: blue;
+}
+#title{
+  width: 30rem;
+  height: 2rem;
+}
+#description{
+  width: 30rem;
+  height: 4rem;
+}
