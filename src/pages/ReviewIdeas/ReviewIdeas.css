@@ -4,7 +4,21 @@
   color: aliceblue;
   margin-top: -10px;
   height: 4rem;
+<<<<<<< HEAD:src/pages/ReviewUsers/ReviewUsers.css
   padding: 20px;
+=======
+padding: 20px;
+}
+.reviewTitle{
+  border-bottom: 3px solid #00f000;
+width: 135px;
+padding-bottom: 10px;
+}
+.content_1{
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;  
+>>>>>>> cfbb3a3087e13978bff86b864dec2564793e1565:src/pages/ReviewIdeas/ReviewIdeas.css
 }
 
 .content_1 {

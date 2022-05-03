@@ -1,6 +1,5 @@
-import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from '@material-ui/icons'
-import React from 'react'
-import { Link } from 'react-router-dom'
+
+
 import "./AddNews.css"
 // import laptop from '../../imgaes/laptop_icon.png';
 // import mobile from '../../images/mobile_icon.png';
@@ -10,11 +9,10 @@ export default function AddNews() {
     <div >
     <div className="addTitleContainer">
         <h2 >Add News</h2>
+        <h3 className="addTitle"/>
         </div>
         <div>
-         <span className="page-title">
-                Add News
-        </span>
+    
         <form className="addnews">
             <input type='checkbox' id="chkbx" tabIndex={0}></input>
             <label className='chkbx-img' id="web-icon">

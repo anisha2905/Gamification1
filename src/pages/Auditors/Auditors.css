@@ -1,5 +1,4 @@
 
-
 .auditTitleContainer{
   background-color: rgb(49, 47, 47);
 box-sizing: 20px;
@@ -128,3 +127,8 @@ table {
 .containerfluidnew{
   padding-left: 15px;
   padding-right: 15px;}
+.auditTitle{
+  border-bottom: 3px solid #00f000;
+width: 95px;
+padding-bottom: 10px;
+}

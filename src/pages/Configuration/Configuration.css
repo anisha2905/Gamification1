@@ -125,3 +125,8 @@ table {
 .containerfluidnew{
   padding-left: 15px;
   padding-right: 15px;}
+.configTitle{
+  border-bottom: 3px solid #00f000;
+width: 145px;
+padding-bottom: 10px;
+}

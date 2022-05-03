@@ -8,6 +8,7 @@ export default function Clusters() {
     <div >
     <div className="clusterTitleContainer">
         <h2 >Clusters</h2>
+        <h3 className="clusterTitle"/>
         </div>
         <div><h1>Hasan part</h1></div>
         <div>

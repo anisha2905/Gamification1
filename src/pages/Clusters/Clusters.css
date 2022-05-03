@@ -125,3 +125,8 @@ table {
 .containerfluidnew{
   padding-left: 15px;
   padding-right: 15px;}
+.clusterTitle{
+  border-bottom: 3px solid #00f000;
+width: 90px;
+padding-bottom: 10px;
+}

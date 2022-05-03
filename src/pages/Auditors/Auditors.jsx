@@ -5,7 +5,8 @@ export default function Product() {
   return (
     <div className='auit-head'>
         <div className="auditTitleContainer">
-            <h2 className="productTitle" color='white'>Auditors</h2>
+            <h2>Auditors</h2>
+            <h3 className="auditTitle"/>
             </div>
             
         <div><h1>Hasan part</h1>
