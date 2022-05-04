@@ -35,7 +35,7 @@ export default function Product() {
               <option>INDIA</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+          
           <div className="div ">
             <label className="label">Year* &nbsp;</label>
             <br />
@@ -101,7 +101,7 @@ export default function Product() {
             <br />
             <textarea name="cluster-name" className="form-control"></textarea>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+          
           <div className="div">
             <label className="ab-c">QCTE ID&nbsp;</label>
             <br />
