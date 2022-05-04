@@ -2,6 +2,8 @@
 import "./AddNews.css"
 import laptop from '../../imgaes/laptop_icon.png';
 import mobile from '../../imgaes/mobile_icon.png';
+import Footer from "../../components/Footer/Footer";
+
 
 
 export default function AddNews() {
@@ -47,9 +49,9 @@ export default function AddNews() {
             </div>
         </form>
     </div>
-        
+    <Footer/>
     </div>
-    <footer><p className="nielsen-footer">Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.</p></footer>
+   
     </>
 
   )

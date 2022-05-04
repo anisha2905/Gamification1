@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import './Auditors.css'
 
 export default function Product() {
@@ -256,12 +257,9 @@ export default function Product() {
             </div>
           </div>
         </div>
-        <div>
-          <p className="nielsen-footer">
-            Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.
-          </p>
-        </div>
+        <Footer/>
       </div>
+    
       </div>
   
   )

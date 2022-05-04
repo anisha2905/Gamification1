@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import "./Clusters.css"
 
 export default function Clusters() {
@@ -120,13 +121,10 @@ export default function Clusters() {
 <span className="fa fa-step-forward linkicon" aria-hidden="true"></span>
                 <div style={{float: "right"}}>0 - 0 of 0 items</div>
                 </div>
-
-                </div>
-                
-            </div>
-            <div><p className="nielsen-footer">Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.</p></div>
-               
+                </div>           
+            </div>          
         </div>
+        <Footer/>
 </div>
   )
 }

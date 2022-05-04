@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import "./ReviewIdeas.css"
 
 export default function ReviewIdeas() {
@@ -203,8 +204,7 @@ export default function ReviewIdeas() {
             
         </div>
 
-        <div><p className="nielsen-footer">Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.</p></div>
-            
+      <Footer/>
     
 </div>
   )

@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import "./Configuration.css"
 export default function Configuration() {
   return (
@@ -132,11 +133,11 @@ export default function Configuration() {
                 
             </div>
             
-               
+             <Footer/>  
         </div>
         
 </div>
-<div className='div_2'><p className="nielsen-footer">Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.</p></div>
+
 </>
   )
 }
