@@ -3,6 +3,9 @@ import "./AddNews.css"
 import laptop from '../../imgaes/laptop_icon.png';
 import mobile from '../../imgaes/mobile_icon.png';
 import Footer from "../../components/Footer/Footer";
+
+
+
 export default function AddNews() {
   return (
       <>
