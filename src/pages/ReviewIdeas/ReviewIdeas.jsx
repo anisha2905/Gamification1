@@ -44,7 +44,7 @@ export default function ReviewIdeas() {
               <option>RES</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+          
           <div className="div">
             <label className="ab-c">Category&nbsp;</label>
             <br />
