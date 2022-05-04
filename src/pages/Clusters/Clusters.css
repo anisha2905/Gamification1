@@ -6,16 +6,18 @@ box-sizing: 20px;
   height: 4rem;
 padding: 20px;
 }
-.content_1{
+.clustercontent{
   float: left;
-  margin-top: 10px;
-  margin-left: 10px;  
+  margin-top: 10px; 
+  margin-left: 16px;
+  padding: 1px 25px 11px 24px;
 }
 
-.div{
+.divnew{
   float: left;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
 }
 .label{
   color: blue;
@@ -43,9 +45,10 @@ padding: 20px;
   color: white;
   background-color: rgba(104, 104, 104, 0.753);
 }
+.btn_3:hover{background-color: #333;}
 .form-control{
-  height: 5vh;
-  width: 200px;
+  height: 6vh;
+  width: 211px;
 }
 #root {
   overflow: auto;
@@ -79,7 +82,7 @@ th {
 
 
 Table {
-  height: 200px;
+  height: 219px;
   border: 1px solid #80808070;
   /* overflow-x: auto;
     display: block;
@@ -104,7 +107,7 @@ Table {
 .tablediv {
   background-color: #fff;
   margin-top: 13px;
-  padding: 0px 10px 4px 10px;
+  padding: 0px 10px 10px 10px;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
   word-wrap: break-word;
@@ -142,6 +145,7 @@ Table {
   border: none;
   padding: 4px 10px 4px 10px;
   border: 1px solid #00f000;
+  font-size: 16px;
 }
 
 .savebtn:hover {
@@ -163,11 +167,31 @@ table {
   border-collapse: collapse;
 
 }
-.containerfluidnew{
+.containerfluidcluster{
   padding-left: 15px;
-  padding-right: 15px;}
+  padding-right: 20px;
+margin-top: 156px;}
 .clusterTitle{
   border-bottom: 3px solid #00f000;
 width: 90px;
 padding-bottom: 10px;
 }
+.clustercontent{background-color: #fff; width: 97%;border-radius: 0.35rem;}
+.btnsearch,.resetbtn,.downloadbtn{padding: 7px 12px 25px 12px;border: 1px solid #000;}
+.k-upload-button input{font: 170px monospace!important;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;}
+  .k-upload-button {position: relative;
+    overflow: hidden;
+    direction: ltr;}
+    .k-dropzone{margin-top: 37px;border: 1px solid #c2b6b6;
+      background-color: #f8f9fa;
+      padding: 10px 10px 10px 10px;}
+    .k-dropzone-hint{float: right;margin-top: -21px;color: #666;}
+
