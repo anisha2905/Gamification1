@@ -104,9 +104,6 @@ export default function ReviewIdeas() {
 <br/>
       <br/>
       </div>
-      
-      
-
       <div>
         <div>
           <div className="container-fluid containerfluid">
