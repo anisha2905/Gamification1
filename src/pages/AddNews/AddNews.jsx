@@ -1,11 +1,12 @@
 
 import "./AddNews.css"
-//import laptop from '/imgaes/laptop_icon.png';
-//import mobile from '../../images/mobile_icon.png';
-import laptop from 'C:/Users/AnishaGanesan/gamification/src/imgaes/laptop_icon.png';
+import laptop from '../../imgaes/laptop_icon.png';
+import mobile from '../../imgaes/mobile_icon.png';
+
 
 export default function AddNews() {
   return (
+      <>
     <div>
     <div className="addTitleContainer">
         <h2 >Add News</h2>
@@ -23,7 +24,7 @@ export default function AddNews() {
             </label>
             <input type='checkbox' id="chkbx" tabIndex={0}></input>
             <label className='chkbx-img' id="mobile-icon">
-                {<img src={laptop} alt="mobile" id='mobile_icon'/> }
+                {<img src={mobile} alt="mobile" id='mobile_icon'/> }
             </label>
         </div>
        
@@ -48,6 +49,8 @@ export default function AddNews() {
     </div>
         
     </div>
+    <footer><p className="nielsen-footer">Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.</p></footer>
+    </>
 
   )
 }

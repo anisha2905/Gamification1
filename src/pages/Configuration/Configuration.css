@@ -107,7 +107,6 @@ Table {
   background-color: #fff;
   padding: 1px 0px;
   margin-top: 13px;
-  ;
 }
 
 .tablediv {
@@ -179,4 +178,13 @@ table {
   border-bottom: 3px solid #00f000;
 width: 145px;
 padding-bottom: 10px;
+}
+.div_1{
+  width: 100%;
+  float: left;
+}
+.div_2{
+  width: 100%;
+  float: left;
+  margin-top: 150px;
 }
