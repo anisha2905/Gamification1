@@ -34,10 +34,10 @@ export default function Configuration() {
     &nbsp; &nbsp; &nbsp; &nbsp; 
     </div>
     <div className="div"><br/>
-    <button className="btn_1">SEARCH</button>
+    <button className="btn_1 btnsearch">SEARCH</button>
     &nbsp; &nbsp; &nbsp; &nbsp;
 
-    <button className="btn_2">RESET</button>
+    <button className="btn_2 resetbtn">RESET</button>
     &nbsp; &nbsp; &nbsp; &nbsp;
     </div>
     </div>
