@@ -13,15 +13,11 @@ import { Settings } from '@material-ui/icons'
 
 
 
-
-
-
 function Sidebar3() {
 
     const[show,setShow]=useState(false);
     
   return (
-      
       <main className={show ? 'space-toggle' : null}>
           <header className='header'>
           <div className='header-toggle' onClick={() => setShow(!show)}>
@@ -92,10 +88,10 @@ function Sidebar3() {
 
         </Routes>
       </div>
-    
+          
+         
 
       </main>
-       
     
   )
 }

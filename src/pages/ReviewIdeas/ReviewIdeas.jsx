@@ -1,4 +1,5 @@
 import React from 'react'
+import "./ReviewIdeas.css"
 import Footer from '../../components/Footer/Footer'
 import './ReviewIdeas.css'
 
@@ -86,9 +87,9 @@ export default function ReviewIdeas() {
             
             <button className="btn_1 btnsearch">SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2 resetbtn">RESET</button>
+            <button className="btn_2">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_3 downloadbtn">EXPORT</button>
+            <button className="btn_3">EXPORT</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
             
           </div>

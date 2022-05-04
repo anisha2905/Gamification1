@@ -1,12 +1,9 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
 import './Auditors.css'
 
 export default function Product() {
   return (
-    //Auditor Header
-   
-      <div>
+    <div>
          <div className="auit-head">
       <div className="auditTitleContainer">
         <h2>Auditors</h2>
@@ -133,11 +130,11 @@ export default function Product() {
           &nbsp; &nbsp; &nbsp; &nbsp;
           <div className="div">
             <br />
-            <button className="btn_1 btnsearch">SEARCH</button>
+            <button className="btn_1">SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2 resetbtn">RESET</button>
+            <button className="btn_2">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_3 downloadbtn">EXPORT</button>
+            <button className="btn_3">EXPORT</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
           </div>
         </div>
@@ -257,9 +254,12 @@ export default function Product() {
             </div>
           </div>
         </div>
-        <Footer/>
+        <div>
+          <p className="nielsen-footer">
+            Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.
+          </p>
+        </div>
       </div>
-    
       </div>
   
   )

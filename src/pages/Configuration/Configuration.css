@@ -1,4 +1,4 @@
-.configTitleContainer{
+.clusterTitleContainer{
   background-color: rgb(49, 47, 47);
 box-sizing: 20px;
   color: aliceblue;
@@ -6,56 +6,50 @@ box-sizing: 20px;
   height: 4rem;
 padding: 20px;
 }
-
-.content_1 {
+.configurationcontent{
   float: left;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 10px; 
+  margin-left: 16px;
+  padding: 1px 25px 26px 24px;
 }
 
-.div {
+.divnew{
   float: left;
   margin-top: 10px;
-  margin-left: 11px;
+  margin-left: 0px;
+  margin-right: 10px;
 }
-
-.label {
+.label{
   color: blue;
 }
-
-.btn_1 {
+.btn_1{
   background-color: black;
   height: 5vh;
   color: white;
 }
-
-:hover.btn_1 {
+:hover.btn_1{
   background-color: rgb(17, 240, 17);
   color: black;
   cursor: pointer;
 }
-
-.btn_2 {
+.btn_2{
   background-color: white;
   height: 5vh;
 }
-
-:hover.btn_2 {
+:hover.btn_2{
   background-color: rgba(100, 96, 96, 0.151);
   cursor: pointer;
 }
-
-.btn_3 {
+.btn_3{
   height: 5vh;
   color: white;
   background-color: rgba(104, 104, 104, 0.753);
 }
-
-.form-control {
+.btn_3:hover{background-color: #333;}
+.form-control{
   height: 6vh;
   width: 211px;
 }
-
 #root {
   overflow: auto;
   flex-grow: 1;
@@ -107,6 +101,7 @@ Table {
   background-color: #fff;
   padding: 1px 0px;
   margin-top: 13px;
+  ;
 }
 
 .tablediv {
@@ -150,6 +145,7 @@ Table {
   border: none;
   padding: 4px 10px 4px 10px;
   border: 1px solid #00f000;
+  font-size: 16px;
 }
 
 .savebtn:hover {
@@ -171,20 +167,31 @@ table {
   border-collapse: collapse;
 
 }
-.containerfluidnew{
+.containerfluidconfiguration{
   padding-left: 15px;
-  padding-right: 15px;}
-.configTitle{
+  padding-right: 20px;
+margin-top: 117px;}
+.clusterTitle{
   border-bottom: 3px solid #00f000;
-width: 145px;
+width: 90px;
 padding-bottom: 10px;
 }
-.div_1{
-  width: 100%;
-  float: left;
-}
-.div_2{
-  width: 100%;
-  float: left;
-  margin-top: 150px;
-}
+.configurationcontent{background-color: #fff; width: 97%;border-radius: 0.35rem;}
+.btnsearch,.resetbtn,.downloadbtn{padding: 7px 12px 25px 12px;border: 1px solid #000;}
+.k-upload-button input{font: 170px monospace!important;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;}
+  .k-upload-button {position: relative;
+    overflow: hidden;
+    direction: ltr;}
+    .k-dropzone{margin-top: 37px;border: 1px solid #c2b6b6;
+      background-color: #f8f9fa;
+      padding: 10px 10px 10px 10px;}
+    .k-dropzone-hint{float: right;margin-top: -21px;color: #666;}
+
