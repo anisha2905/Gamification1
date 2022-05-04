@@ -70,17 +70,23 @@ export default function Configuration() {
                 <table  bordered  >
                         <thead>
                             <tr>
-                            <th><input type="checkbox"/></th>
-                            <th>Country ID</th>
-                            <th>Cluster ID</th>
-                            <th>Cluster Name</th>
-                            <th>Target Recruitment Stores</th>
-                            <th>Updated By</th>
-                            <th>Updated On</th>
+                            <th>Country(ID)</th>
+                            <th>Process ID</th>
+                            <th>Process Name</th>
+                            <th>Enable</th>
+                            <th>FTE</th>
+                            <th>Freelancer</th>
+                            <th>RA</th>
+                            <th>RES</th>
+                            <th>SFA</th>
+                            <th>NSO</th>
                             </tr>
                         </thead>
                         <tbody>
                         <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
@@ -97,6 +103,9 @@ export default function Configuration() {
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
         </tr>
  <tr>
         <td>Table cell</td>
@@ -104,6 +113,9 @@ export default function Configuration() {
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
         </tr>
