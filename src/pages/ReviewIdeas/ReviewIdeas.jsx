@@ -80,15 +80,16 @@ export default function ReviewIdeas() {
         </div>
         &nbsp; &nbsp; &nbsp; &nbsp;
         <div className="div"><br/>
-            <button className="btn_1">SEARCH</button>
+            <button className="btn_1 btnsearch">SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2">RESET</button>
+            <button className="btn_2 resetbtn">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_3">EXPORT</button>
+            <button className="btn_3 downloadbtn">EXPORT</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
         </div>
    </div>
    </div>
+   <br></br>
         <div >
           <div>
           <div  className='container-fluid containerfluid'>

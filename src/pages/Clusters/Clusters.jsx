@@ -122,25 +122,12 @@ export default function Clusters() {
                     
                 
                 </div>
-                {/* <div className="tablefooter">
-<span className="fa fa-step-backward linkicon" aria-hidden="true"></span>
-<span className="fa fa-caret-left linkicon" aria-hidden="true"></span>
-<span className="fa fa-caret-right linkicon" aria-hidden="true"></span>
-<span className="fa fa-step-forward linkicon" aria-hidden="true"></span>
-                <div style={{float: "right"}}>0 - 0 of 0 items</div>
-<<<<<<< HEAD
-                </div>
-                </div>           
-            </div>          
-=======
-                </div> */}
+               
 
                 </div>
                 
             </div>
-            <div><p className="nielsen-footer">Copyright © 2021 Nielsen Consumer LLC. All Rights Reserved.</p></div>
-               
->>>>>>> bcb21bc3b452382313861a03d0b449c6d7930236
+            
         </div>
         <Footer/>
 </div>
