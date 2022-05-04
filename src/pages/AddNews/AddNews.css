@@ -12,13 +12,19 @@ padding: 20px;
 width: 100px;
 padding-bottom: 10px;
 }
-
+.icons{
+  padding: 10px;
+ 
+}
+.chkbx-img{
+  padding-right: 190px;
+}
 .App {
+
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +32,10 @@ padding-bottom: 10px;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.main{
+  padding: 30px;
+  background-color: white;
 }
 
 .App-link {
@@ -51,15 +61,57 @@ padding-bottom: 10px;
   flex-grow:1;
   flex-direction: column;
   width: 35rem;
+  background-color: white;
 }
 .titles{
   color: blue;
+  display: block;
+  white-space: pre;
+  padding: 5px;
+        
+
+
 }
 #title{
   width: 30rem;
   height: 2rem;
+  padding: 20px;
+ margin-bottom: 10px;
+  
 }
 #description{
   width: 30rem;
   height: 4rem;
+  margin-bottom: 10px;
+}
+#act-date{
+  margin-bottom: 10px;
+  width: 30rem;
+  height: 2rem;
+}
+
+#exp-date{
+  margin-bottom: 20px;
+  width: 30rem;
+  height: 2rem;
+}
+.save{
+padding-left: 400px;
+}
+#savebtn{
+  background-color:  #00f000;;
+ border-color: #00f000;
+  width: 4rem;
+  height: 2rem;
+  margin: 10px;
+   
+}
+#resetbtn{
+
+    border-color: #666;
+    color: #fff;
+    background-color: #666;
+  width: 4rem;
+  height: 2rem;
+   
 }
