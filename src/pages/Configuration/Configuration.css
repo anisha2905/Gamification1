@@ -180,3 +180,7 @@ table {
 width: 145px;
 padding-bottom: 10px;
 }
+.div_1{
+  width: 100%;
+  float: left;
+}

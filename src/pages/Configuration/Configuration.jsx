@@ -8,7 +8,7 @@ export default function Configuration() {
         <h2 >Configuration</h2>
         <h3 className="configTitle"/>
         </div>
-        <div>
+        <div className='div_1'>
           <div className="content_1">
     <div className="div">
     <label className="label">Region* &nbsp;</label><br/>
@@ -40,7 +40,7 @@ export default function Configuration() {
     </div>
     </div>
         </div>
-        <div>
+        <div className='div_1'>
         <div  className='container-fluid containerfluidnew'>
                 
                 <div className="col-lg-12 tablediv">
