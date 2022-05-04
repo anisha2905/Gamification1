@@ -9,8 +9,9 @@ export default function Clusters() {
         <h3 className="clusterTitle"/>
         </div>
         <div>
-        <div className="content_1">
-    <div className="div">
+        <div className=" clustercontent">
+          <div>
+    <div className="divnew">
       <label className="label">Region* &nbsp;</label><br/>
       <select name="region" className="form-control">
         <option>EUROPE</option> 
@@ -32,18 +33,25 @@ export default function Clusters() {
     </div>
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div"><br/>
-    <button className="btn_1">SEARCH</button>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <button className="btn_2">RESET</button>
-    &nbsp; &nbsp; &nbsp; &nbsp;
+    <button className="btn_1 btnsearch">Search</button>
+    &nbsp; &nbsp; 
+    <button className="btn_2 resetbtn" >Reset</button>
+    &nbsp; &nbsp; 
 
-    <button className="btn_3">DOWNLOAD TEMPLATE</button>
+    <button className="btn_3 downloadbtn">Download Template</button>
     &nbsp; &nbsp; &nbsp; &nbsp;
     </div>
+    </div>
+    <br />
+    <div className="k-dropzone">
+      <div role="button" className="k-button k-upload-button" aria-label="Select files..." tabindex="0">
+        <input autocomplete="off" name="file" type="file" tabindex="-1" />
+          <span>Select files...</span></div>
+    <div className="k-dropzone-hint">Drop files here to upload</div></div>
     </div>
         </div>
         <div>
-        <div  className='container-fluid containerfluidnew'>
+        <div  className='container-fluid containerfluidcluster'>
                 
                 <div className="col-lg-12 tablediv">
                     <div>
@@ -113,13 +121,13 @@ export default function Clusters() {
                     
                 
                 </div>
-                <div className="tablefooter">
+                {/* <div className="tablefooter">
 <span className="fa fa-step-backward linkicon" aria-hidden="true"></span>
 <span className="fa fa-caret-left linkicon" aria-hidden="true"></span>
 <span className="fa fa-caret-right linkicon" aria-hidden="true"></span>
 <span className="fa fa-step-forward linkicon" aria-hidden="true"></span>
                 <div style={{float: "right"}}>0 - 0 of 0 items</div>
-                </div>
+                </div> */}
 
                 </div>
                 

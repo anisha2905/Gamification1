@@ -2,7 +2,8 @@
 import "./AddNews.css"
 //import laptop from '/imgaes/laptop_icon.png';
 //import mobile from '../../images/mobile_icon.png';
-import laptop from 'C:/Users/AnishaGanesan/gamification/src/imgaes/laptop_icon.png';
+import laptop from 'C:/Users/TruptiPradhan/gamification1/src/imgaes/laptop_icon.png';
+
 
 export default function AddNews() {
   return (

@@ -45,8 +45,8 @@ padding: 20px;
   background-color: rgba(104, 104, 104, 0.753);
 }
 .form-control{
-  height: 5vh;
-  width: 200px;
+  height: 6vh;
+  width: 211px;
 }
 #root {
   overflow: auto;
@@ -80,7 +80,7 @@ th {
 
 
 Table {
-  height: 200px;
+  height: 219px;
   border: 1px solid #80808070;
   /* overflow-x: auto;
     display: block;
@@ -105,7 +105,7 @@ Table {
 .tablediv {
   background-color: #fff;
   margin-top: 13px;
-  padding: 0px 10px 4px 10px;
+  padding: 0px 10px 10px 10px;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
   word-wrap: break-word;
@@ -143,6 +143,7 @@ Table {
   border: none;
   padding: 4px 10px 4px 10px;
   border: 1px solid #00f000;
+  font-size: 16px;
 }
 
 .savebtn:hover {
