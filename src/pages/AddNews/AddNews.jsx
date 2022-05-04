@@ -1,5 +1,4 @@
 
-
 import "./AddNews.css"
 // import laptop from '../../imgaes/laptop_icon.png';
 // import mobile from '../../images/mobile_icon.png';
