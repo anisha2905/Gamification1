@@ -3,9 +3,7 @@ import './Auditors.css'
 
 export default function Product() {
   return (
-    //Auditor Header
-   
-      <div>
+    <div>
          <div className="auit-head">
       <div className="auditTitleContainer">
         <h2>Auditors</h2>
