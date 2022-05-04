@@ -9,6 +9,7 @@ export default function ReviewIdeas() {
         <h2>Review Ideas</h2>
         <h3 className="reviewTitle" />
       </div>
+      <div >
       <div>
         <div className="content_1">
           <div className="div">
@@ -94,6 +95,8 @@ export default function ReviewIdeas() {
         </div>
       </div>
       <br></br>
+      </div>
+      
       
 
       <div>

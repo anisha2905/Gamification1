@@ -180,3 +180,9 @@ table {
 .containerfluid{margin-top: 140px;
   padding-left: 15px;
   padding-right: 15px;}
+  .reviewcontent{
+    background-color: #fff;
+      
+      
+      border-radius: 0.35rem;
+  }

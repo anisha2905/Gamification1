@@ -14,8 +14,8 @@ export default function Product() {
       </div>
       </div>
     
-      <div>
-        <div className="content_1 ">
+      <div >
+        <div className="content_1  auditorcontent">
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
@@ -31,7 +31,7 @@ export default function Product() {
             </select>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div">
+          <div className="div auditorcontent">
             <label className="label">Country* &nbsp;</label>
             <br />
             <select name="country" className="form-control">
@@ -39,7 +39,7 @@ export default function Product() {
             </select>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div">
+          <div className="div ">
             <label className="label">Year* &nbsp;</label>
             <br />
             <select name="year" className="form-control">
@@ -50,7 +50,7 @@ export default function Product() {
             </select>
           </div>
           
-          <div className="div">
+          <div className="div auditorcontent">
             <label className="label">Frequency* &nbsp;</label>
             <br />
             <select name="frequency" className="form-control">
