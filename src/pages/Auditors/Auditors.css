@@ -17,6 +17,7 @@ padding: 20px;
   float: left;
   margin-top: 10px;
   margin-left: 10px;
+ 
 }
 .label{
   color: blue;
@@ -172,4 +173,9 @@ table {
   border-bottom: 3px solid #00f000;
 width: 95px;
 padding-bottom: 10px;
+}
+.divnew{
+ margin-bottom: 10px;
+  margin-top: 10px;
+  
 }

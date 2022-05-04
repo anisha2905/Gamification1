@@ -12,7 +12,7 @@ export default function Product() {
       </div>
     
       <div>
-        <div className="content_1">
+        <div className="content_1 ">
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
@@ -46,7 +46,7 @@ export default function Product() {
               <option>2022</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+          
           <div className="div">
             <label className="label">Frequency* &nbsp;</label>
             <br />
@@ -55,8 +55,8 @@ export default function Product() {
               <option>Quarterly</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div">
+          
+          <div className="div divnew">
             <label className="label">Period* &nbsp;</label>
             <br />
             <select name="period" className="form-control">
@@ -107,7 +107,7 @@ export default function Product() {
             <br />
             <textarea name="qcte-id" className="form-control"></textarea>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+          
           <div className="div">
             <label className="ab-c">QCTE Name&nbsp;</label>
             <br />
