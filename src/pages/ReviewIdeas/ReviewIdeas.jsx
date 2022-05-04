@@ -56,9 +56,7 @@ export default function ReviewIdeas() {
             <label className="ab-c">Cluster Id&nbsp;<br/></label>
             <select name="cluster-id" className="form-control"></select>
           </div>
-        </div>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <div className="content_1">
+          <div className="content_1">
           <div className="div">
             <label className="ab-c">Cluster Name&nbsp;</label>
             <br />
@@ -87,15 +85,25 @@ export default function ReviewIdeas() {
             
             <button className="btn_1 btnsearch">SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2">RESET</button>
+            <button className="btn_2 resetbtn">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_3">EXPORT</button>
+            <button className="btn_3 downloadbtn">EXPORT</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            
+            <br/>
           </div>
+        
         </div>
+        </div>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+     
+        <br/>
+        <br/>
       </div>
-      <br></br>
+      <br/>
+      <br/>
+
+<br/>
+      <br/>
       </div>
       
       
