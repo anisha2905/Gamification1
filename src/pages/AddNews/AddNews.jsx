@@ -1,12 +1,9 @@
 
 import "./AddNews.css"
-<<<<<<< HEAD
 import laptop from '../../imgaes/laptop_icon.png';
 import mobile from '../../imgaes/mobile_icon.png';
 import Footer from "../../components/Footer/Footer";
 
-=======
->>>>>>> bcb21bc3b452382313861a03d0b449c6d7930236
 
 
 export default function AddNews() {
