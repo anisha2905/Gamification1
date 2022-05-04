@@ -91,13 +91,10 @@ export default function ReviewIdeas() {
             &nbsp; &nbsp; &nbsp; &nbsp;
             
           </div>
-         
-        
         </div>
-        <br/>
         </div>
         
-     
+         <br/>
         <br/>
         <br/>
       </div>
