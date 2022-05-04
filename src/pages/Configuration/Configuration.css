@@ -52,8 +52,8 @@ padding: 20px;
 }
 
 .form-control {
-  height: 5vh;
-  width: 200px;
+  height: 6vh;
+  width: 211px;
 }
 
 #root {
@@ -88,7 +88,7 @@ th {
 
 
 Table {
-  height: 200px;
+  height: 219px;
   border: 1px solid #80808070;
   /* overflow-x: auto;
     display: block;
@@ -112,7 +112,7 @@ Table {
 .tablediv {
   background-color: #fff;
   margin-top: 13px;
-  padding: 0px 10px 4px 10px;
+  padding: 0px 10px 10px 10px;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
   word-wrap: break-word;
