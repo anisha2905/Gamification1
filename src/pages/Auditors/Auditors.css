@@ -7,7 +7,47 @@ box-sizing: 20px;
   height: 4rem;
 padding: 20px;
 }
+.content_1{
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;  
+}
 
+.div{
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.label{
+  color: blue;
+}
+.btn_1{
+  background-color: black;
+  height: 5vh;
+  color: white;
+}
+:hover.btn_1{
+  background-color: rgb(17, 240, 17);
+  color: black;
+  cursor: pointer;
+}
+.btn_2{
+  background-color: white;
+  height: 5vh;
+}
+:hover.btn_2{
+  background-color: rgba(100, 96, 96, 0.151);
+  cursor: pointer;
+}
+.btn_3{
+  height: 5vh;
+  color: white;
+  background-color: rgba(104, 104, 104, 0.753);
+}
+.form-control{
+  height: 5vh;
+  width: 200px;
+}
 #root {
   overflow: auto;
   flex-grow: 1;

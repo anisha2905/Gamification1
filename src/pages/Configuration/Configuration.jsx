@@ -8,7 +8,38 @@ export default function Configuration() {
         <h2 >Configuration</h2>
         <h3 className="configTitle"/>
         </div>
-        <div><h1>Hasan part</h1></div>
+        <div>
+          <div className="content_1">
+    <div className="div">
+    <label className="label">Region* &nbsp;</label><br/>
+    <select name="region" className="form-control">
+        <option>EUROPE</option> 
+        <option>GREATER CHINA</option>
+        <option>GREATER INDIA</option>
+        <option>LATAM</option>
+        <option>MENAP</option>
+        <option>NORTH AMERICA</option>
+        <option>SA & SSA</option>
+        <option>SEANAP</option> 
+    </select>
+    </div>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <div className="div">
+      <label className="label">Country* &nbsp;</label><br/>
+      <select name="country" className="form-control">
+        <option>INDIA</option>
+      </select>
+    &nbsp; &nbsp; &nbsp; &nbsp; 
+    </div>
+    <div className="div"><br/>
+    <button className="btn_1">SEARCH</button>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+
+    <button className="btn_2">RESET</button>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    </div>
+    </div>
+        </div>
         <div>
         <div  className='container-fluid containerfluidnew'>
                 
