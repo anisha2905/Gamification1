@@ -23,7 +23,7 @@ function Sidebar3() {
           <div className='header-toggle' onClick={() => setShow(!show)}>
                 <DehazeOutlined className='topbarIcon'/>
                 <AccountTreeOutlined className='topbarlogo'/>
-              <span className="logo">Gamification</span>      
+              <span className="logo">Gamification</span> 
                 </div>
             <div className="topRight">
                 <div className="topbarIconContainer">
