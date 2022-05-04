@@ -78,9 +78,7 @@ export default function Product() {
               <option>October-December</option>
             </select>
           </div>
-        </div>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <div className="content_1">
+          <div className="content_1">
           <div className="div">
             <label className="label">Collection Type *&nbsp;</label>
             <br />
@@ -89,13 +87,13 @@ export default function Product() {
               <option>RES</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+        
           <div className="div">
             <label className="ab-c">Cluster Id&nbsp;</label>
             <br />
             <select name="cluster-id" className="form-control"></select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+         
           <div className="div">
             <label className="ab-c">Cluster Name&nbsp;</label>
             <br />
@@ -113,21 +111,19 @@ export default function Product() {
             <br />
             <textarea name="qcte-name" className="form-control"></textarea>
           </div>
-        </div>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <div className="content_1">
+          <div className="content_1">
           <div className="div">
             <label className="ab-c">Auditor Id&nbsp;</label>
             <br />
             <textarea name="auditor-id" className="form-control"></textarea>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+         
           <div className="div">
             <label className="ab-c">Auditor Name&nbsp;</label>
             <br />
             <textarea name="auditor-name" className="form-control"></textarea>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+         
           <div className="div">
             <br />
             <button className="btn_1 btnsearch">SEARCH</button>
@@ -135,9 +131,16 @@ export default function Product() {
             <button className="btn_2 resetbtn">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
             <button className="btn_3 downloadbtn">EXPORT</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
+           
           </div>
+         
         </div>
+        </div>
+        </div>
+        
+        
+        
+        
       </div>
 
 

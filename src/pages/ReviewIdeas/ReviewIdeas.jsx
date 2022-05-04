@@ -89,12 +89,14 @@ export default function ReviewIdeas() {
             &nbsp; &nbsp; &nbsp; &nbsp;
             <button className="btn_3 downloadbtn">EXPORT</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <br/>
+            
           </div>
+         
         
         </div>
+        <br/>
         </div>
-        &nbsp; &nbsp; &nbsp; &nbsp;
+        
      
         <br/>
         <br/>
