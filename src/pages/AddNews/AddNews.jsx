@@ -1,5 +1,8 @@
 
 import "./AddNews.css"
+import laptop from '../../imgaes/laptop_icon.png';
+import mobile from '../../imgaes/mobile_icon.png';
+
 
 
 export default function AddNews() {
