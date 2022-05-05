@@ -1,0 +1,884 @@
+{
+  "ClusterDetails":[
+      {
+        "clusterId":265047,
+        "ClusterName":"12-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":271047,
+        "ClusterName":"01-C",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":471047,
+        "ClusterName":"10-C",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264052,
+        "ClusterName":"13-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":71648,
+        "ClusterName":"G-Test",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264048,
+        "ClusterName":"05-E",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":263047,
+        "ClusterName":"04-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":252049,
+        "ClusterName":"01-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":270048,
+        "ClusterName":"02-C",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":263048,
+        "ClusterName":"04-C",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":472047,
+        "ClusterName":"10-D",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":252050,
+        "ClusterName":"01-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264047,
+        "ClusterName":"05-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264050,
+        "ClusterName":"14-C",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":266049,
+        "ClusterName":"11-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":265052,
+        "ClusterName":"10-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":670047,
+        "ClusterName":"01-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":266048,
+        "ClusterName":"11-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264049,
+        "ClusterName":"06-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":270047,
+        "ClusterName":"14-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":404047,
+        "ClusterName":"06-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":253048,
+        "ClusterName":"02-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":265048,
+        "ClusterName":"12-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":266047,
+        "ClusterName":"10-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":268047,
+        "ClusterName":"08-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":51848,
+        "ClusterName":"08-A1",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":307047,
+        "ClusterName":"23 CENSO",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264051,
+        "ClusterName":"13-C",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":260050,
+        "ClusterName":"03-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":262047,
+        "ClusterName":"04-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264057,
+        "ClusterName":"07-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":264053,
+        "ClusterName":"13-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":268048,
+        "ClusterName":"14-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":260049,
+        "ClusterName":"02-A",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":333047,
+        "ClusterName":"08-D",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":261047,
+        "ClusterName":"03-B",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"BRAZIL(76)",
+        "CountryId":"BRAZIL"
+      },
+      {
+        "clusterId":786048,
+        "ClusterName":"IZMIR CITY",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"TURKEY(792)",
+        "CountryId":"TURKEY"
+      },
+      {
+        "clusterId":87048,
+        "ClusterName":"Cluster_50025",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87085,
+        "ClusterName":"Cluster_51024",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87064,
+        "ClusterName":"Cluster_30000",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87068,
+        "ClusterName":"Cluster_30007",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87083,
+        "ClusterName":"Cluster_10002",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87088,
+        "ClusterName":"Cluster_51052",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":136047,
+        "ClusterName":"Cluster_75010",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":233047,
+        "ClusterName":"Cluster_50002",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87075,
+        "ClusterName":"Cluster_40903",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87095,
+        "ClusterName":"Cluster_60001",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87089,
+        "ClusterName":"Cluster_30002",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87094,
+        "ClusterName":"Cluster_50003",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87093,
+        "ClusterName":"Cluster_83023",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":104047,
+        "ClusterName":"Cluster_53003",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87077,
+        "ClusterName":"Cluster_40006",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":220047,
+        "ClusterName":"cluster_88888",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87066,
+        "ClusterName":"Cluster_50001",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87071,
+        "ClusterName":"Cluster_40001",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":146047,
+        "ClusterName":"Cluster_50009",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87084,
+        "ClusterName":"Cluster_12939",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":128047,
+        "ClusterName":"Cluster_72072",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87060,
+        "ClusterName":"Cluster_78000",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87098,
+        "ClusterName":"Cluster_80001",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87090,
+        "ClusterName":"Cluster_70004",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87049,
+        "ClusterName":"Cluster_60004",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87070,
+        "ClusterName":"Cluster_40007",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87087,
+        "ClusterName":"Cluster_30006",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87067,
+        "ClusterName":"Cluster_30004",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87086,
+        "ClusterName":"Cluster_51078",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87074,
+        "ClusterName":"Cluster_40004",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87080,
+        "ClusterName":"Cluster_10004",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87069,
+        "ClusterName":"Cluster_32023",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87055,
+        "ClusterName":"Cluster_22003",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87054,
+        "ClusterName":"cluster_20006",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87051,
+        "ClusterName":"cluster_20011",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87079,
+        "ClusterName":"Cluster_40002",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87052,
+        "ClusterName":"cluster_20007",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87056,
+        "ClusterName":"Cluster_50005",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":144047,
+        "ClusterName":"Cluster_10026",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":103047,
+        "ClusterName":"Cluster_20014",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87091,
+        "ClusterName":"Cluster_30013",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87063,
+        "ClusterName":"Cluster_70001",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87076,
+        "ClusterName":"Cluster_40005",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":132047,
+        "ClusterName":"cluster_80007",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87097,
+        "ClusterName":"Cluster_74001",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87059,
+        "ClusterName":"Cluster_77000",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":145047,
+        "ClusterName":"Cluster_50031",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87072,
+        "ClusterName":"Cluster_30021",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87081,
+        "ClusterName":"Cluster_19005",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87062,
+        "ClusterName":"Cluster_80006",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":103048,
+        "ClusterName":"Cluster_50028",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":400000,
+        "ClusterName":"RES_Cluster-4R-Game",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":404801,
+        "ClusterName":"China Custom Rg",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":240048,
+        "ClusterName":"RES_30009",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      },
+      {
+        "clusterId":87065,
+        "ClusterName":"Cluster_45001",
+        "StoreRecruitmentTarget":0,
+        "RecruitmentTargetUpdatedBy":"System",
+        "RecruitmentTargetUpdatedOn":"30-04-2022 12:30:00",
+        "Country":"CHINA(156)",
+        "CountryId":"CHINA"
+      }
+    ],
+    "CountrydetailsDetails":[
+      {
+        "Region":"LATAM",
+        "Country":"BRAZIL"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"TURKEY"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"AUSTRIA"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"AZERBAIJAN"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"CHINA"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"HONG KONG"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"TAIWAN"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"ARGENTINA"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"BOLIVIA"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"CHILE"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"DOMINICAN REPUBLIC"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"NICARAGUA"
+      }
+     
+    ]
+  
+}

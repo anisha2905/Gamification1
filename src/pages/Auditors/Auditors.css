@@ -67,6 +67,7 @@ th {
   padding: 0.75rem !important;
   border-width: 0 0 1px 1px;
   white-space: nowrap;
+  padding: 0.5rem;
 }
 
 .table>:not(:first-child) {
@@ -166,9 +167,7 @@ table {
   border-collapse: collapse;
 
 }
-.containerfluidnew{
-  padding-left: 15px;
-  padding-right: 15px;}
+
 .auditTitle{
   border-bottom: 3px solid #00f000;
 width: 95px;

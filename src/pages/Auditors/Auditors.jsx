@@ -12,7 +12,7 @@ export default function Product() {
       </div>
     
       <div >
-        <div className="content_1  auditorcontent">
+        <div className="content_1  auditorcontent" style={{paddingBottom: "11px",marginRight: "15px"}}>
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
@@ -79,7 +79,7 @@ export default function Product() {
             </select>
           </div>
           <div className="content_1">
-          <div className="div">
+          <div className="div" style={{marginLeft: "3px"}}>
             <label className="label">Collection Type *&nbsp;</label>
             <br />
             <select name="period" className="form-control">
@@ -111,8 +111,8 @@ export default function Product() {
             <br />
             <textarea name="qcte-name" className="form-control"></textarea>
           </div>
-          <div className="content_1">
-          <div className="div">
+          <div className="content_1" style={{marginLeft: "7px"}}>
+          <div className="div" style={{marginLeft: "0px"}}>
             <label className="ab-c">Auditor Id&nbsp;</label>
             <br />
             <textarea name="auditor-id" className="form-control"></textarea>
@@ -145,7 +145,7 @@ export default function Product() {
 
 
 
-      <div className="content_1">
+      <div className="content_1" style={{width: "98%"}}>
         <div className="container-fluid containerfluidnew">
           <div className="col-lg-12 tablediv">
             <div>
