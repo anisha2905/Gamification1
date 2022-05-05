@@ -138,7 +138,7 @@ export default function ReviewIdeas() {
               </div>
 
               <div className="col-lg-12 div1" style={{ overflowX: 'auto' }}>
-                <table bordered>
+                <table className="table">
                   <thead>
                     <tr>
                       <th>Country(ID)</th>
