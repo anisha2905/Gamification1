@@ -56,8 +56,7 @@ export default function ReviewIdeas() {
             <label className="ab-c">Cluster Id&nbsp;<br/></label>
             <select name="cluster-id" className="form-control"></select>
           </div>
-          <div className="content_1">
-          <div className="div" style={{marginLeft:"0px"}}>
+          <div className="div">
             <label className="ab-c">Cluster Name&nbsp;</label>
             <br />
             <textarea name="cluster-name" className="form-control"></textarea>
@@ -81,7 +80,7 @@ export default function ReviewIdeas() {
             <textarea name="auditor-id" className="form-control"></textarea>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div" >
+          <div className="div"><br/>
             
             <button className="btn_1 btnsearch">SEARCH</button>
             &nbsp; &nbsp; &nbsp;
@@ -91,7 +90,6 @@ export default function ReviewIdeas() {
             &nbsp; &nbsp; &nbsp;
             
           </div>
-        </div>
         </div>
         
          <br/>
@@ -138,7 +136,7 @@ export default function ReviewIdeas() {
               </div>
 
               <div className="col-lg-12 div1" style={{ overflowX: 'auto' }}>
-                <table bordered>
+                <table className="table">
                   <thead>
                     <tr>
                       <th>Country(ID)</th>
