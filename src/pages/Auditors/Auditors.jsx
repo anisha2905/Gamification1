@@ -11,8 +11,8 @@ export default function Product() {
       </div>
       </div>
     
-      <div >
-        <div className="content_1  auditorcontent">
+      <div className='auditorcontent'>
+        <div className="content_1">
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
@@ -28,7 +28,7 @@ export default function Product() {
             </select>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div auditorcontent">
+          <div className="div">
             <label className="label">Country* &nbsp;</label>
             <br />
             <select name="country" className="form-control">
@@ -36,7 +36,7 @@ export default function Product() {
             </select>
           </div>
           
-          <div className="div ">
+          <div className="div">
             <label className="label">Year* &nbsp;</label>
             <br />
             <select name="year" className="form-control">
@@ -47,7 +47,7 @@ export default function Product() {
             </select>
           </div>
           
-          <div className="div auditorcontent">
+          <div className="div">
             <label className="label">Frequency* &nbsp;</label>
             <br />
             <select name="frequency" className="form-control">
@@ -56,9 +56,9 @@ export default function Product() {
             </select>
           </div>
           
-          <div className="div divnew">
+          <div className="div">
             <label className="label">Period* &nbsp;</label>
-            <br />
+            <br/>
             <select name="period" className="form-control">
               <option>January</option>
               <option>February</option>
@@ -78,7 +78,6 @@ export default function Product() {
               <option>October-December</option>
             </select>
           </div>
-          <div className="content_1">
           <div className="div">
             <label className="label">Collection Type *&nbsp;</label>
             <br />
@@ -111,7 +110,6 @@ export default function Product() {
             <br />
             <textarea name="qcte-name" className="form-control"></textarea>
           </div>
-          <div className="content_1">
           <div className="div">
             <label className="ab-c">Auditor Id&nbsp;</label>
             <br />
@@ -133,9 +131,6 @@ export default function Product() {
             <button className="btn_3 downloadbtn">EXPORT</button>
            
           </div>
-         
-        </div>
-        </div>
         </div>
         
         
