@@ -1,7 +1,61 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './Auditors.css'
 
 export default function Product() {
+  const [region, setRegion]= useState([]);
+  const [regionid, setRegionid]= useState();
+  const [country, setCountry]= useState([]);
+  const [value, setValue] = useState([]);
+  const [search, setSearch] = useState([]);
+  const [frequency, setFrequency]= useState([]);
+
+  
+  
+  
+
+  useEffect( ()=>{
+       const getRegion=async()=>{
+           const res=await fetch("http://localhost:3000/Auditors");
+           const getcon=await res.json();
+           console.log(getcon);
+           setRegion(await getcon);
+       }
+       getRegion();
+    },[]);
+
+    let regions = [...new Set(region.map(item=> item.Region))];
+regions.sort();
+console.log(region);
+
+const handleregion=(e)=>{
+    e.preventDefault();
+    let countries=region.filter(country=>country.Region=== e.target.value);
+    console.log(countries);
+    countries=[...new Set(countries.map(item=>item.Country))];
+    countries.sort();
+    setCountry(countries);
+   
+    ///setUser(e.target.value);
+    console.log(e.target.value);
+    
+  }
+
+ let frequencies = [...new Set(frequency.map(item=> item.Frequency))];
+frequencies.sort();
+console.log(frequency);
+  function searchRecord() {
+      fetch(`http://localhost:3000/user?Countryname=${value}`, {
+        method: "GET"
+
+      }).then((result) => {
+        result.json().then((resp) => {
+          setSearch(resp)
+          console.log(resp)
+
+        })
+      })
+    
+  }
   return (
     <div>
          <div className="auit-head">
@@ -16,23 +70,22 @@ export default function Product() {
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
-            <select name="region" className="form-control">
-              <option>EUROPE</option>
-              <option>GREATER CHINA</option>
-              <option>GREATER INDIA</option>
-              <option>LATAM</option>
-              <option>MENAP</option>
-              <option>NORTH AMERICA</option>
-              <option>SA & SSA</option>
-              <option>SEANAP</option>
+            <select name="region" className="form-control" onChange={(e)=>handleregion(e)}>
+                   <option>--Select Region--</option>
+                   {regions.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
           <div className="div">
             <label className="label">Country* &nbsp;</label>
             <br />
-            <select name="country" className="form-control">
-              <option>INDIA</option>
+            <select name="country" className="form-control" onChange={(e) => setValue(e.target.value)} id="country" value={value} >
+    <option>--Select Country--</option>
+                   {country.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
           
@@ -50,9 +103,11 @@ export default function Product() {
           <div className="div">
             <label className="label">Frequency* &nbsp;</label>
             <br />
-            <select name="frequency" className="form-control">
-              <option>Monthly</option>
-              <option>Quarterly</option>
+            <select name="country" className="form-control" id="country" value={value} >
+    <option>--Select Frequency--</option>
+                   {frequency.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
           
@@ -81,9 +136,11 @@ export default function Product() {
           <div className="div">
             <label className="label">Collection Type *&nbsp;</label>
             <br />
-            <select name="period" className="form-control">
-              <option>RA</option>
-              <option>RES</option>
+            <select name="country" className="form-control"  id="country" value={value} >
+    <option>--Select Country--</option>
+                   {country.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
         
