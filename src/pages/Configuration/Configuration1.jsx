@@ -1,10 +1,7 @@
 
 import React,{useEffect,useState} from 'react'
 import "./Configuration.css"
-<<<<<<< HEAD
-=======
-// import axios from 'axios';
->>>>>>> ee59bbd5ec77d9e75445c1d784d32b413c44b607
+
 export default function Configuration() {
   const [region, setRegion]= useState([]);
   const [regionid, setRegionid]= useState();
@@ -155,22 +152,25 @@ const handleregion=(e)=>{
                         {country.length === 0 ? (
                            <tbody> 
                           <tr>
-                            <td>No data Found</td>
+                            <tr>No data Found</tr>
                           </tr>
                                          
                         </tbody>
                         ):(
-                          country.filter(index=>index.Countryname.toLowerCase().includes(value)).map((item,index)=>(
+                          country.map((item,index)=>(
                             <tbody key={index.id}>
                                 <tr>
                                 <td>{item.id}</td>
-                                    <td>{item.firstname}</td>
-                                    <td>{item.lastname}</td>
-                                    <td>{item.gender}</td>
-                                    <td>{item.countryname}</td>
-                                    <td>{item.statename}</td>
-                                    <td>{item.cityname}</td>
-                                    <td>{item.phone}</td>
+                                    <td>{item.Country}</td>
+                                    <td>{item.ProcessId}</td>
+                                    <td>{item.ProcessName}</td>
+                                    <td>{item.Enable}</td>
+                                    <td>{item.FTE}</td>
+                                    <td>{item.Freelancer}</td>
+                                    <td>{item.RA}</td>
+                                    <td>{item.RES}</td>
+                                    <td>{item.SFA}</td>
+                                    <td>{item.NSO}</td>
               
                                 </tr>
                             
@@ -181,7 +181,7 @@ const handleregion=(e)=>{
                                 
                             
 
-                        )
+                    
                           
 
                           

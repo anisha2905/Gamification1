@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-{ "user":[
+
+{ 
+  "user":[
     {
         "Region":"GREATER CHINA",
         "Regionid":"1",
@@ -7,7 +8,7 @@
         "Countryname":"CHINA",
        "ProcessId":"G12",
        "ProcessName":"Chatbot Response - On time",
-            "Description":"Chatbot Response - On time",
+      "Description":"Chatbot Response - On time",
             "Enable":true,
             "FTE":true,
             "Freelancer":true,
@@ -339,7 +340,4 @@
         }
       
         
-    
-   
-=======
->>>>>>> dba85829be20adde466a4ddb6cbbe05840de3b93
+
