@@ -37,6 +37,12 @@ const handleregion=(e)=>{
     console.log(e.target.value);
     
   }
+  const handlesearchDetails=(e)=>{
+    e.preventDefault();
+    setValue(e.target.value)
+   
+
+  }
   
 
 
@@ -100,7 +106,7 @@ const handleregion=(e)=>{
     </div>
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div"><br/>
-    <button className="btn_1 btnsearch">Search</button>
+    <button className="btn_1 btnsearch" onClick={() => handlesearchDetails()}>Search</button>
     &nbsp; &nbsp; 
     <button className="btn_2 resetbtn" >Reset</button>
     &nbsp; &nbsp;
@@ -132,8 +138,8 @@ const handleregion=(e)=>{
                 <div className="col-lg-12 div1" style={{overflowX:"auto"}}>
 
                     
-                   
-                <table  bordered  >
+                
+                <table  bordered ="true" > 
                         <thead>
                             <tr>
                             <th>Country(ID)</th>
@@ -148,50 +154,43 @@ const handleregion=(e)=>{
                             <th>NSO</th>
                             </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-        <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        </tr>
- <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-         <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        </tr>
-                            
+                        {country.length === 0 ? (
+                           <tbody> 
+                          <tr>
+                            <td>No data Found</td>
+                          </tr>
+                                         
                         </tbody>
-                    </table>
+                        ):(
+                          country.filter(index=>index.Countryname.toLowerCase().includes(value)).map((item,index)=>(
+                            <tbody key={index.id}>
+                                <tr>
+                                <td>{item.id}</td>
+                                    <td>{item.firstname}</td>
+                                    <td>{item.lastname}</td>
+                                    <td>{item.gender}</td>
+                                    <td>{item.countryname}</td>
+                                    <td>{item.statename}</td>
+                                    <td>{item.cityname}</td>
+                                    <td>{item.phone}</td>
+              
+                                </tr>
+                            
+                            </tbody>
+                            
+                            ))
+                            )}
+                                
+                            
 
-               
+                        )
+                          
 
-                    
+                          
+
+                          
+                        
+                    </table>                    
                 
                 </div>
                 <div className="tablefooter">
