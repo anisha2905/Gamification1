@@ -1,7 +1,7 @@
 
 import React,{useEffect,useState} from 'react'
 import "./Configuration.css"
-import axios from 'axios';
+// import axios from 'axios';
 export default function Configuration() {
   const [region, setRegion]= useState([]);
   const [regionid, setRegionid]= useState();
