@@ -35,7 +35,7 @@ export default function Clusters() {
 
     }
 
-    else {
+  else {
 
       fetch(`http://localhost:3000/ClusterDetails?CountryId=${record}`, {
         method: "GET"
