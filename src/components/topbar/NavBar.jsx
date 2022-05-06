@@ -9,11 +9,11 @@ import Clusters from '../../pages/Clusters/Clusters';
 import Configuration from '../../pages/Configuration/Configuration';
 import Auditors from '../../pages/Auditors/Auditors';
 import AddNews from '../../pages/AddNews/AddNews';
-import { Settings } from '@material-ui/icons'
+import { Settings } from '@material-ui/icons';
 
 
 
-function Sidebar3() {
+function Sidebar3(props) {
 
     const[show,setShow]=useState(false);
     
@@ -23,8 +23,13 @@ function Sidebar3() {
           <div className='header-toggle' onClick={() => setShow(!show)}>
                 <DehazeOutlined className='topbarIcon'/>
                 <AccountTreeOutlined className='topbarlogo'/>
-              <span className="logo">Gamification</span> 
-                </div>
+              <span className="logo">Gamification</span>
+              </div>
+              <div id="marquee">
+                    <div id="mar-content">
+                      {props.details}
+                    </div>  
+                </div>    
             <div className="topRight">
                 <div className="topbarIconContainer">
                 <AccountTreeOutlined className='topbarlogo1'/>
