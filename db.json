@@ -1218,7 +1218,99 @@
         "Regionid":"5"
     }
      
-    ]
+    ],
+
+
+    "Auditors":[
+      {
+	        "Country":"CHINA",
+	"Region":"GREATER CHINA",
+        "AuditorName":"Manjunath Cs",
+        "AuditorId":392562,
+        "ProfileType":"FREELANCER",
+        "TotalPoints":360,
+        "Level":1,
+        "qcte":null,
+        "qcte_id":null,
+        "quarterly_points":360,
+        "clusterId":240048,
+        "ClusterName":"RES_30009",
+        "CountryRanking":"12",
+        "ClusterRanking":"12",
+        "ProfileStatus":"ACTIVE",
+        "CountryId":"CHINA(156)",
+	"CollectionType":"RES",
+        "Frequency":"Quarterly"
+      },
+	{
+	"Country":"CHINA",
+	"Region":"GREATER CHINA",
+        "AuditorName":"Manju R",
+        "AuditorId":392553,
+        "ProfileType":"FREELANCER",
+        "TotalPoints":360,
+        "Level":1,
+        "qcte":null,
+        "qcte_id":null,
+        "monthly_points":360,
+        "clusterId":240048,
+        "ClusterName":"RES_30009",
+        "CountryRanking":"10",
+        "ClusterRanking":"10",
+        "ProfileStatus":"ACTIVE",
+        "CountryId":"CHINA(156)",
+	      "CollectionType":"RA",
+        "Frequency":"Monthly"
+      },
+	{
+        "Region":"LATAM",
+        "Country":"BRAZIL"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"TURKEY"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"AUSTRIA"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"AZERBAIJAN"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"CHINA"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"HONG KONG"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"TAIWAN"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"ARGENTINA"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"BOLIVIA"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"CHILE"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"DOMINICAN REPUBLIC"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"NICARAGUA"
+      }
+]
 
     
   
