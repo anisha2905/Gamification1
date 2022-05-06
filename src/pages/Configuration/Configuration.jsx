@@ -1,30 +1,34 @@
 
 import React from 'react'
 import "./Configuration.css"
+
 export default function Configuration() {
+
+
   return (
     <>
     <div >
     <div className="clusterTitleContainer">
-        <h2 >Configuration</h2>
-        <h3 className="clusterTitle"/>
+        <h2 className="configTitle" >Configuration</h2>
+        
         </div>
         <div>
         <div className=" configurationcontent">
           <div>
     <div className="divnew">
+    
       <label className="label">Region* &nbsp;</label><br/>
-      <select name="region" className="form-control">
-        <option>EUROPE</option> 
-        <option>GREATER CHINA</option>
-        <option>GREATER INDIA</option>
+    <select name="region" className="form-control">
+    <option>EUROPE</option> 
+     <option>GREATER CHINA</option>
+     <option>GREATER INDIA</option>
         <option>LATAM</option>
-        <option>MENAP</option>
-        <option>NORTH AMERICA</option>
-        <option>SA & SSA</option>
-        <option>SEANAP</option> 
-    </select>
-    </div>
+      <option>MENAP</option>
+      <option>NORTH AMERICA</option>
+       <option>SA & SSA</option>
+      <option>SEANAP</option> 
+  </select>
+   </div> 
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div">
     <label className="label">Country* &nbsp;</label><br/>
@@ -70,42 +74,54 @@ export default function Configuration() {
                 <table  bordered  >
                         <thead>
                             <tr>
-                            <th><input type="checkbox"/></th>
-                            <th>Country ID</th>
-                            <th>Cluster ID</th>
-                            <th>Cluster Name</th>
-                            <th>Target Recruitment Stores</th>
-                            <th>Updated By</th>
-                            <th>Updated On</th>
+                            <th>Country(ID)</th>
+                            <th>Process ID</th>
+                            <th>Process Name</th>
+                            <th>Enable</th>
+                            <th>FTE</th>
+                            <th>Freelancer</th>
+                            <th>RA</th>
+                            <th>RES</th>
+                            <th>SFA</th>
+                            <th>NSO</th>
                             </tr>
                         </thead>
                         <tbody>
                         <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
         <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         </tr>
  <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+ <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         </tr>
                             
                         </tbody>

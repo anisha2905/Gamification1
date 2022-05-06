@@ -12,7 +12,7 @@ export default function ReviewIdeas() {
       </div>
       <div >
       <div>
-        <div className="content_1">
+        <div className=" content_review" style={{paddingBottom: "10px"}}>
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
@@ -44,7 +44,7 @@ export default function ReviewIdeas() {
               <option>RES</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+          
           <div className="div">
             <label className="ab-c">Category&nbsp;</label>
             <br />
@@ -56,9 +56,6 @@ export default function ReviewIdeas() {
             <label className="ab-c">Cluster Id&nbsp;<br/></label>
             <select name="cluster-id" className="form-control"></select>
           </div>
-        </div>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <div className="content_1">
           <div className="div">
             <label className="ab-c">Cluster Name&nbsp;</label>
             <br />
@@ -83,23 +80,28 @@ export default function ReviewIdeas() {
             <textarea name="auditor-id" className="form-control"></textarea>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div">
+          <div className="div"><br/>
             
             <button className="btn_1 btnsearch">SEARCH</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2">RESET</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_3">EXPORT</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;
+            <button className="btn_2 resetbtn">RESET</button>
+            &nbsp; &nbsp; &nbsp;
+            <button className="btn_3 downloadbtn">EXPORT</button>
+            &nbsp; &nbsp; &nbsp;
             
           </div>
         </div>
+        
+         <br/>
+        <br/>
+        <br/>
       </div>
-      <br></br>
-      </div>
-      
-      
+      <br/>
+      <br/>
 
+<br/>
+      <br/>
+      </div>
       <div>
         <div>
           <div className="container-fluid containerfluid">
@@ -134,7 +136,7 @@ export default function ReviewIdeas() {
               </div>
 
               <div className="col-lg-12 div1" style={{ overflowX: 'auto' }}>
-                <table bordered>
+                <table className="table">
                   <thead>
                     <tr>
                       <th>Country(ID)</th>
@@ -153,46 +155,46 @@ export default function ReviewIdeas() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
+                    <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
+                    <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </table>

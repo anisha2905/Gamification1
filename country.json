@@ -1,0 +1,55 @@
+{
+  
+    "CountrydetailsDetails":[
+      {
+        "Region":"LATAM",
+        "Country":"BRAZIL"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"TURKEY"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"AUSTRIA"
+      },
+      {
+        "Region":"EUROPE",
+        "Country":"AZERBAIJAN"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"CHINA"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"HONG KONG"
+      },
+      {
+        "Region":"GREATER CHINA",
+        "Country":"TAIWAN"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"ARGENTINA"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"BOLIVIA"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"CHILE"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"DOMINICAN REPUBLIC"
+      },
+      {
+        "Region":"LATAM",
+        "Country":"NICARAGUA"
+      }
+     
+    ]
+  
+}

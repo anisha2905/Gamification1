@@ -11,8 +11,8 @@ export default function Product() {
       </div>
       </div>
     
-      <div >
-        <div className="content_1  auditorcontent">
+      <div className='auditorcontent'>
+        <div className="content_1">
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
@@ -28,15 +28,15 @@ export default function Product() {
             </select>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div auditorcontent">
+          <div className="div">
             <label className="label">Country* &nbsp;</label>
             <br />
             <select name="country" className="form-control">
               <option>INDIA</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
-          <div className="div ">
+          
+          <div className="div">
             <label className="label">Year* &nbsp;</label>
             <br />
             <select name="year" className="form-control">
@@ -47,7 +47,7 @@ export default function Product() {
             </select>
           </div>
           
-          <div className="div auditorcontent">
+          <div className="div">
             <label className="label">Frequency* &nbsp;</label>
             <br />
             <select name="frequency" className="form-control">
@@ -56,9 +56,9 @@ export default function Product() {
             </select>
           </div>
           
-          <div className="div divnew">
+          <div className="div">
             <label className="label">Period* &nbsp;</label>
-            <br />
+            <br/>
             <select name="period" className="form-control">
               <option>January</option>
               <option>February</option>
@@ -78,9 +78,6 @@ export default function Product() {
               <option>October-December</option>
             </select>
           </div>
-        </div>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <div className="content_1">
           <div className="div">
             <label className="label">Collection Type *&nbsp;</label>
             <br />
@@ -89,19 +86,19 @@ export default function Product() {
               <option>RES</option>
             </select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+        
           <div className="div">
             <label className="ab-c">Cluster Id&nbsp;</label>
             <br />
             <select name="cluster-id" className="form-control"></select>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+         
           <div className="div">
             <label className="ab-c">Cluster Name&nbsp;</label>
             <br />
             <textarea name="cluster-name" className="form-control"></textarea>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+          
           <div className="div">
             <label className="ab-c">QCTE ID&nbsp;</label>
             <br />
@@ -113,36 +110,37 @@ export default function Product() {
             <br />
             <textarea name="qcte-name" className="form-control"></textarea>
           </div>
-        </div>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <div className="content_1">
           <div className="div">
             <label className="ab-c">Auditor Id&nbsp;</label>
             <br />
             <textarea name="auditor-id" className="form-control"></textarea>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+         
           <div className="div">
             <label className="ab-c">Auditor Name&nbsp;</label>
             <br />
             <textarea name="auditor-name" className="form-control"></textarea>
           </div>
-          &nbsp; &nbsp; &nbsp; &nbsp;
+         
           <div className="div">
             <br />
-            <button className="btn_1">SEARCH</button>
+            <button className="btn_1 btnsearch">SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2">RESET</button>
+            <button className="btn_2 resetbtn">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_3">EXPORT</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
+            <button className="btn_3 downloadbtn">EXPORT</button>
+           
           </div>
         </div>
+        
+        
+        
+        
       </div>
 
 
 
-      <div className="content_1">
+      <div className="content_1" style={{width: "98%"}}>
         <div className="container-fluid containerfluidnew">
           <div className="col-lg-12 tablediv">
             <div>

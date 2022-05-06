@@ -6,7 +6,7 @@ import React,{useState} from 'react'
 import "./NavBar.css"
 import ReviewIdeas from '../../pages/ReviewIdeas/ReviewIdeas';
 import Clusters from '../../pages/Clusters/Clusters';
-import Configuration from '../../pages/Configuration/Configuration';
+import Configuration1 from '../../pages/Configuration/Configuration1';
 import Auditors from '../../pages/Auditors/Auditors';
 import AddNews from '../../pages/AddNews/AddNews';
 import { Settings } from '@material-ui/icons';
@@ -88,13 +88,11 @@ function Sidebar3(props) {
             <Route path='/reviewideas' element={<ReviewIdeas/>} />
             <Route path='/auditors' element={<Auditors/>} />
             <Route path='/clusters' element={<Clusters/>} />
-            <Route path='/configuration' element={<Configuration/>} />
+            <Route path='/configuration' element={<Configuration1/>} />
             <Route path='/addnews' element={<AddNews/>} />
 
         </Routes>
-      </div>
-          
-         
+      </div>         
 
       </main>
     
