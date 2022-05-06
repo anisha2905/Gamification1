@@ -172,9 +172,10 @@ table {
   padding-left: 15px;
   padding-right: 20px;
 margin-top: 117px;}
-.clusterTitle{
+
+.configTitle{
   border-bottom: 3px solid #00f000;
-width: 90px;
+width: 150px;
 padding-bottom: 10px;
 }
 .configurationcontent{background-color: #fff; width: 97%;border-radius: 0.35rem;}

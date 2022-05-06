@@ -1,30 +1,34 @@
 
 import React from 'react'
 import "./Configuration.css"
+
 export default function Configuration() {
+
+
   return (
     <>
     <div >
     <div className="clusterTitleContainer">
-        <h2 >Configuration</h2>
-        <h3 className="clusterTitle"/>
+        <h2 className="configTitle" >Configuration</h2>
+        
         </div>
         <div>
         <div className=" configurationcontent">
           <div>
     <div className="divnew">
+    
       <label className="label">Region* &nbsp;</label><br/>
-      <select name="region" className="form-control">
-        <option>EUROPE</option> 
-        <option>GREATER CHINA</option>
-        <option>GREATER INDIA</option>
+    <select name="region" className="form-control">
+    <option>EUROPE</option> 
+     <option>GREATER CHINA</option>
+     <option>GREATER INDIA</option>
         <option>LATAM</option>
-        <option>MENAP</option>
-        <option>NORTH AMERICA</option>
-        <option>SA & SSA</option>
-        <option>SEANAP</option> 
-    </select>
-    </div>
+      <option>MENAP</option>
+      <option>NORTH AMERICA</option>
+       <option>SA & SSA</option>
+      <option>SEANAP</option> 
+  </select>
+   </div> 
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div">
     <label className="label">Country* &nbsp;</label><br/>
