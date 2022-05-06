@@ -1,7 +1,6 @@
 
 import React,{useEffect,useState} from 'react'
 import "./Configuration.css"
-import axios from 'axios';
 export default function Configuration() {
   const [region, setRegion]= useState([]);
   const [regionid, setRegionid]= useState();
@@ -37,12 +36,7 @@ const handleregion=(e)=>{
     console.log(e.target.value);
     
   }
-  const handlesearchDetails=(e)=>{
-    e.preventDefault();
-    setValue(e.target.value)
-   
-
-  }
+ 
   
 
 
@@ -97,7 +91,7 @@ const handleregion=(e)=>{
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div">
     <label className="label">Country* &nbsp;</label><br/>
-    <select name="country" className="form-control" onChange={(e)=>setValue(e.target.value)}>
+    <select name="country" className="form-control">
     <option>--Select Country--</option>
                    {country.map(items => (
         <option key={items} value={items}>{items}</option>
@@ -106,7 +100,7 @@ const handleregion=(e)=>{
     </div>
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div"><br/>
-    <button className="btn_1 btnsearch" onClick={() => handlesearchDetails()}>Search</button>
+    <button className="btn_1 btnsearch" >Search</button>
     &nbsp; &nbsp; 
     <button className="btn_2 resetbtn" >Reset</button>
     &nbsp; &nbsp;
