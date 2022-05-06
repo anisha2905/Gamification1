@@ -140,7 +140,7 @@ export default function Product() {
 
 
 
-      <div className="content_1">
+      <div className="content_1" style={{width: "98%"}}>
         <div className="container-fluid containerfluidnew">
           <div className="col-lg-12 tablediv">
             <div>

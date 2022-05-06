@@ -11,10 +11,10 @@
 width: 135px;
 padding-bottom: 10px;
 }
-.content_1 {
+.content_review {
   float: left;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 16px;
   background-color: #fff;
       width: 97%;
       
@@ -192,6 +192,7 @@ th {
   border: 1px solid #80808070;
   white-space: nowrap;
   text-align: center;
+  padding: 0.5rem;
 }
 
 table {
@@ -199,7 +200,7 @@ table {
   border-collapse: collapse;
 
 }
-.containerfluid{margin-top: 140px;
+.containerfluid{margin-top: 37px;
   padding-left: 15px;
   padding-right: 15px;}
  

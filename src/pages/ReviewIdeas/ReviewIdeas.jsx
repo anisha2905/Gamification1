@@ -12,7 +12,7 @@ export default function ReviewIdeas() {
       </div>
       <div >
       <div>
-        <div className="content_1">
+        <div className=" content_review" style={{paddingBottom: "10px"}}>
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
@@ -83,11 +83,11 @@ export default function ReviewIdeas() {
           <div className="div"><br/>
             
             <button className="btn_1 btnsearch">SEARCH</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;
             <button className="btn_2 resetbtn">RESET</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;
             <button className="btn_3 downloadbtn">EXPORT</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;
             
           </div>
         </div>
