@@ -133,13 +133,12 @@ const handleregion=(e)=>{
                        
                         
                    <tbody>
-                            {search.length > 0 ? search.map((item, index) => (
-                                <tr key={index}>
-                                <td>{item.id}</td>
+                            {search.length > 0 ? search.map((item) => (
+                                <tr>
                                     <td>{item.Country}</td>
                                     <td>{item.ProcessId}</td>
                                     <td>{item.ProcessName}</td>
-                                    <td>{item.Enable}</td>
+                                    <td input type="checkbox">{item.Enable}</td>
                                     <td>{item.FTE}</td>
                                     <td>{item.Freelancer}</td>
                                     <td>{item.RA}</td>
