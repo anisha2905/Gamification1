@@ -8,6 +8,7 @@ export default function Product() {
   const [value, setValue] = useState([]);
   const [search, setSearch] = useState([]);
   const [frequency, setFrequency]= useState([]);
+  const [collection, setCollection]= useState([]);
 
   
   
@@ -40,11 +41,36 @@ const handleregion=(e)=>{
     
   }
 
- let frequencies = [...new Set(frequency.map(item=> item.Frequency))];
-frequencies.sort();
+  useEffect( ()=>{
+    const getFrequency=async()=>{
+        const res=await fetch("http://localhost:3000/Auditors");
+        const getfreq=await res.json();
+        console.log(getfreq);
+        setFrequency(await getfreq);
+    }
+    getFrequency();
+ },[]);
+
+ let frequencys = [...new Set(frequency.map(item=> item.Frequency))];
+frequencys.sort();
 console.log(frequency);
+
+useEffect( ()=>{
+  const getCollection=async()=>{
+      const res=await fetch("http://localhost:3000/Auditors");
+      const getcol=await res.json();
+      console.log(getcol);
+      setCollection(await getcol);
+  }
+  getCollection();
+},[]);
+
+let collections = [...new Set(collection.map(item=> item.Collection))];
+collections.sort();
+console.log(collection);
+
   function searchRecord() {
-      fetch(`http://localhost:3000/user?Countryname=${value}`, {
+      fetch(`http://localhost:3000/Auditors?Country=${value}`, {
         method: "GET"
 
       }).then((result) => {
@@ -103,9 +129,9 @@ console.log(frequency);
           <div className="div">
             <label className="label">Frequency* &nbsp;</label>
             <br />
-            <select name="country" className="form-control" id="country" value={value} >
+            <select name="frequency" className="form-control" id="frequency">
     <option>--Select Frequency--</option>
-                   {frequency.map(items => (
+                   {frequencys.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
@@ -136,9 +162,9 @@ console.log(frequency);
           <div className="div">
             <label className="label">Collection Type *&nbsp;</label>
             <br />
-            <select name="country" className="form-control"  id="country" value={value} >
-    <option>--Select Country--</option>
-                   {country.map(items => (
+            <select name="collection" className="form-control"  id="collection">
+    <option>--Select Collection--</option>
+                   {collections.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
@@ -181,7 +207,7 @@ console.log(frequency);
          
           <div className="div">
             <br />
-            <button className="btn_1 btnsearch">SEARCH</button>
+            <button className="btn_1 btnsearch" onClick={searchRecord}>SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
             <button className="btn_2 resetbtn">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
@@ -237,54 +263,28 @@ console.log(frequency);
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                  <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                  <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                {search.length > 0 ? search.map((item) => (
+                                <tr>
+                                    <td>{item.CountryId}</td>
+                                    <td>{item.qcte_id}</td>
+                                    <td>{item.qcte}</td>
+                                    <td>{item.clusterId}</td>
+                                    <td>{item.ClusterName}</td>
+                                    <td>{item.AuditorId}</td>
+                                    <td>{item.AuditorName}</td>
+                                    <td>{item.ProfileType}</td>
+                                    <td>{item.ProfileStatus}</td>
+                                    <td>{item.Level}</td>
+                                    <td>{item.TotalPoints}</td>
+                                    <td>{item.monthly_points}</td>
+                                    <td>{item.CountryRanking}</td>
+                                    <td>{item.ClusterRanking}</td>
+              
+                                </tr>
+                                )) :  <div>
+                                <p >No Data Found </p>
+                              </div>}
+                            
                 </tbody>
               </table>
             </div>
