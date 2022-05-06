@@ -7,6 +7,7 @@ export default function Configuration() {
   const [regionid, setRegionid]= useState();
   const [country, setCountry]= useState([]);
   const [value, setValue] = useState([]);
+  const [search, setSearch] = useState([]);
   
   
   
@@ -37,37 +38,19 @@ const handleregion=(e)=>{
     console.log(e.target.value);
     
   }
- 
-  
+  function searchRecord() {
+      fetch(`http://localhost:3000/user?Countryname=${value}`, {
+        method: "GET"
 
+      }).then((result) => {
+        result.json().then((resp) => {
+          setSearch(resp)
+          console.log(resp)
 
-   /* const handleregion=(event)=>{
-        event.preventDefault();
-        const getregionid= event.target.value;
-        setRegionid(getregionid);
-        
-      }
-      useEffect( ()=>{
-        const getCountry= async ()=>{
-          const rescountry= await fetch(`http://localhost:3000/user/${regionid}`);
-          const getcoun= rescountry.json();
-          setCountry(await getcoun);
-          console.log("error3");
-        }
-        getCountry();
-      },[regionid]); 
-      
-  
-
- /* const handlecountry=(e)=>{
-    e.preventDefault();
-    let country=data.filter(country=>country.region === e.target.value);
+        })
+      })
     
-    country=[...new Set(country.map(item=>item.subcountry))];
-    country.sort();
-    console.log(e.target.value);
-  } */
-
+  }
   return (
     <>
     <div >
@@ -92,7 +75,7 @@ const handleregion=(e)=>{
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div">
     <label className="label">Country* &nbsp;</label><br/>
-    <select name="country" className="form-control">
+    <select name="country" className="form-control" onChange={(e) => setValue(e.target.value)} id="country" value={value} >
     <option>--Select Country--</option>
                    {country.map(items => (
         <option key={items} value={items}>{items}</option>
@@ -101,7 +84,7 @@ const handleregion=(e)=>{
     </div>
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div"><br/>
-    <button className="btn_1 btnsearch" >Search</button>
+    <button className="btn_1 btnsearch" onClick={searchRecord}>Search</button>
     &nbsp; &nbsp; 
     <button className="btn_2 resetbtn" >Reset</button>
     &nbsp; &nbsp;
@@ -149,17 +132,11 @@ const handleregion=(e)=>{
                             <th>NSO</th>
                             </tr>
                         </thead>
-                        {country.length === 0 ? (
-                           <tbody> 
-                          <tr>
-                            <tr>No data Found</tr>
-                          </tr>
-                                         
-                        </tbody>
-                        ):(
-                          country.map((item,index)=>(
-                            <tbody key={index.id}>
-                                <tr>
+                       
+                        
+                   <tbody>
+                            {search.length > 0 ? search.map((item, i) => (
+                                <tr key={i}>
                                 <td>{item.id}</td>
                                     <td>{item.Country}</td>
                                     <td>{item.ProcessId}</td>
@@ -173,12 +150,13 @@ const handleregion=(e)=>{
                                     <td>{item.NSO}</td>
               
                                 </tr>
+                                )) :  <div>
+                                <p >No Data avaliable</p>
+                              </div>}
                             
                             </tbody>
                             
-                            ))
-                            )}
-                                
+                          
                             
 
                     
@@ -191,6 +169,7 @@ const handleregion=(e)=>{
                     </table>                    
                 
                 </div>
+                            
                 <div className="tablefooter">
 <span className="fa fa-step-backward linkicon" aria-hidden="true"></span>
 <span className="fa fa-caret-left linkicon" aria-hidden="true"></span>
