@@ -115,8 +115,6 @@ const handleregion=(e)=>{
 
                 <div className="col-lg-12 div1" style={{overflowX:"auto"}}>
 
-                    
-                
                 <table  bordered ="true" > 
                         <thead>
                             <tr>
@@ -135,8 +133,8 @@ const handleregion=(e)=>{
                        
                         
                    <tbody>
-                            {search.length > 0 ? search.map((item, i) => (
-                                <tr key={i}>
+                            {search.length > 0 ? search.map((item, index) => (
+                                <tr key={index}>
                                 <td>{item.id}</td>
                                     <td>{item.Country}</td>
                                     <td>{item.ProcessId}</td>
@@ -151,7 +149,7 @@ const handleregion=(e)=>{
               
                                 </tr>
                                 )) :  <div>
-                                <p >No Data avaliable</p>
+                                <p >No Data Found </p>
                               </div>}
                             
                             </tbody>
