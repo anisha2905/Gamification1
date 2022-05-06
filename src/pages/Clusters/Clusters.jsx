@@ -37,7 +37,7 @@ export default function Clusters() {
 
     else {
 
-      fetch(`http://localhost:3000/ClusterDetails?Country=${record}`, {
+      fetch(`http://localhost:3000/ClusterDetails?CountryId=${record}`, {
         method: "GET"
 
       }).then((result) => {
@@ -76,12 +76,25 @@ export default function Clusters() {
       result.json().then((resp) => {
 
         console.log(resp)
-        var json = JSON.stringify(resp);
+        // var json = JSON.stringify(resp);
 
-        console.log(json);
-        for (var i = 0; i < json.length; i++) {
-          document.getElementById("country").append(" <option>" + json[i].Country + "</option> ");
+        // console.log(json);
+        var select = document.getElementById("country");
+        // Logic to remove all options from the select dropdown
+        var length = select.options.length;
+        for (i = length-1; i > 0; i--) {
+          select.options[i] = null;
         }
+        // Logic to remove all options from the select dropdown
+
+        // Logic to add options to the select dropdown
+        for (var i = 0; i < resp.length; i++) {
+          var option = document.createElement("option");
+          option.text = resp[i].Country;
+          option.value = resp[i].Country;
+          select.appendChild(option);
+        }
+        // Logic to add options to the select dropdown
 
 
       })
@@ -203,7 +216,9 @@ export default function Clusters() {
                       <td>{item.RecruitmentTargetUpdatedBy}</td>
                       <td>{item.RecruitmentTargetUpdatedOn}</td>
                     </tr>
-                  )) : <div>No Data avaliable</div>}
+                  )) :  <div>
+                  <p >No Data avaliable</p>
+                </div>}
 
                 </tbody>
 
