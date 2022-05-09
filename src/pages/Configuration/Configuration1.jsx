@@ -1,11 +1,12 @@
-
 import React,{useEffect,useState} from 'react'
 import "./Configuration.css"
+
 export default function Configuration() {
   const [region, setRegion]= useState([]);
   const [regionid, setRegionid]= useState();
   const [country, setCountry]= useState([]);
   const [value, setValue] = useState([]);
+  const [search, setSearch] = useState([]);
   
   
   
@@ -36,37 +37,19 @@ const handleregion=(e)=>{
     console.log(e.target.value);
     
   }
- 
-  
+  function searchRecord() {
+      fetch(`http://localhost:3000/user?Countryname=${value}`, {
+        method: "GET"
 
+      }).then((result) => {
+        result.json().then((resp) => {
+          setSearch(resp)
+          console.log(resp)
 
-   /* const handleregion=(event)=>{
-        event.preventDefault();
-        const getregionid= event.target.value;
-        setRegionid(getregionid);
-        
-      }
-      useEffect( ()=>{
-        const getCountry= async ()=>{
-          const rescountry= await fetch(`http://localhost:3000/user/${regionid}`);
-          const getcoun= rescountry.json();
-          setCountry(await getcoun);
-          console.log("error3");
-        }
-        getCountry();
-      },[regionid]); 
-      
-  
-
- /* const handlecountry=(e)=>{
-    e.preventDefault();
-    let country=data.filter(country=>country.region === e.target.value);
+        })
+      })
     
-    country=[...new Set(country.map(item=>item.subcountry))];
-    country.sort();
-    console.log(e.target.value);
-  } */
-
+  }
   return (
     <>
     <div >
@@ -91,7 +74,7 @@ const handleregion=(e)=>{
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div">
     <label className="label">Country* &nbsp;</label><br/>
-    <select name="country" className="form-control">
+    <select name="country" className="form-control" onChange={(e) => setValue(e.target.value)} id="country" value={value} >
     <option>--Select Country--</option>
                    {country.map(items => (
         <option key={items} value={items}>{items}</option>
@@ -100,7 +83,7 @@ const handleregion=(e)=>{
     </div>
     &nbsp; &nbsp; &nbsp; &nbsp;
     <div className="div"><br/>
-    <button className="btn_1 btnsearch" >Search</button>
+    <button className="btn_1 btnsearch" onClick={searchRecord}>Search</button>
     &nbsp; &nbsp; 
     <button className="btn_2 resetbtn" >Reset</button>
     &nbsp; &nbsp;
@@ -131,8 +114,6 @@ const handleregion=(e)=>{
 
                 <div className="col-lg-12 div1" style={{overflowX:"auto"}}>
 
-                    
-                
                 <table  bordered ="true" > 
                         <thead>
                             <tr>
@@ -148,36 +129,33 @@ const handleregion=(e)=>{
                             <th>NSO</th>
                             </tr>
                         </thead>
-                        {country.length === 0 ? (
-                           <tbody> 
-                          <tr>
-                            <td>No data Found</td>
-                          </tr>
-                                         
-                        </tbody>
-                        ):(
-                          country.filter(index=>index.Countryname.toLowerCase().includes(value)).map((item,index)=>(
-                            <tbody key={index.id}>
+                       
+                        
+                   <tbody>
+                            {search.length > 0 ? search.map((item) => (
                                 <tr>
-                                <td>{item.id}</td>
-                                    <td>{item.firstname}</td>
-                                    <td>{item.lastname}</td>
-                                    <td>{item.gender}</td>
-                                    <td>{item.countryname}</td>
-                                    <td>{item.statename}</td>
-                                    <td>{item.cityname}</td>
-                                    <td>{item.phone}</td>
+                                    <td>{item.Country}</td>
+                                    <td>{item.ProcessId}</td>
+                                    <td>{item.ProcessName}</td>
+                                    <td input type="checkbox">{item.Enable}</td>
+                                    <td>{item.FTE}</td>
+                                    <td>{item.Freelancer}</td>
+                                    <td>{item.RA}</td>
+                                    <td>{item.RES}</td>
+                                    <td>{item.SFA}</td>
+                                    <td>{item.NSO}</td>
               
                                 </tr>
+                                )) :  <div>
+                                <p >No Data Found </p>
+                              </div>}
                             
                             </tbody>
                             
-                            ))
-                            )}
-                                
+                          
                             
 
-                        )
+                    
                           
 
                           
@@ -187,6 +165,7 @@ const handleregion=(e)=>{
                     </table>                    
                 
                 </div>
+                            
                 <div className="tablefooter">
 <span className="fa fa-step-backward linkicon" aria-hidden="true"></span>
 <span className="fa fa-caret-left linkicon" aria-hidden="true"></span>
@@ -204,4 +183,5 @@ const handleregion=(e)=>{
 </div>
 </>
   )
-}
+                            }
+                            
