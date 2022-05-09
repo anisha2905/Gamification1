@@ -1,7 +1,87 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './Auditors.css'
 
 export default function Product() {
+  const [region, setRegion]= useState([]);
+  const [regionid, setRegionid]= useState();
+  const [country, setCountry]= useState([]);
+  const [value, setValue] = useState([]);
+  const [search, setSearch] = useState([]);
+  const [frequency, setFrequency]= useState([]);
+  const [collection, setCollection]= useState([]);
+
+  
+  
+  
+
+  useEffect( ()=>{
+       const getRegion=async()=>{
+           const res=await fetch("http://localhost:3000/Auditors");
+           const getcon=await res.json();
+           console.log(getcon);
+           setRegion(await getcon);
+       }
+       getRegion();
+    },[]);
+
+    let regions = [...new Set(region.map(item=> item.Region))];
+regions.sort();
+console.log(region);
+
+const handleregion=(e)=>{
+    e.preventDefault();
+    let countries=region.filter(country=>country.Region=== e.target.value);
+    console.log(countries);
+    countries=[...new Set(countries.map(item=>item.Country))];
+    countries.sort();
+    setCountry(countries);
+   
+    ///setUser(e.target.value);
+    console.log(e.target.value);
+    
+  }
+
+  useEffect( ()=>{
+    const getFrequency=async()=>{
+        const res=await fetch("http://localhost:3000/Auditors");
+        const getfreq=await res.json();
+        console.log(getfreq);
+        setFrequency(await getfreq);
+    }
+    getFrequency();
+ },[]);
+
+ let frequencys = [...new Set(frequency.map(item=> item.Frequency))];
+frequencys.sort();
+console.log(frequency);
+
+useEffect( ()=>{
+  const getCollection=async()=>{
+      const res=await fetch("http://localhost:3000/Auditors");
+      const getcol=await res.json();
+      console.log(getcol);
+      setCollection(await getcol);
+  }
+  getCollection();
+},[]);
+
+let collections = [...new Set(collection.map(item=> item.Collection))];
+collections.sort();
+console.log(collection);
+
+  function searchRecord() {
+      fetch(`http://localhost:3000/Auditors?Country=${value}`, {
+        method: "GET"
+
+      }).then((result) => {
+        result.json().then((resp) => {
+          setSearch(resp)
+          console.log(resp)
+
+        })
+      })
+    
+  }
   return (
     <div>
          <div className="auit-head">
@@ -16,23 +96,22 @@ export default function Product() {
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
-            <select name="region" className="form-control">
-              <option>EUROPE</option>
-              <option>GREATER CHINA</option>
-              <option>GREATER INDIA</option>
-              <option>LATAM</option>
-              <option>MENAP</option>
-              <option>NORTH AMERICA</option>
-              <option>SA & SSA</option>
-              <option>SEANAP</option>
+            <select name="region" className="form-control" onChange={(e)=>handleregion(e)}>
+                   <option>--Select Region--</option>
+                   {regions.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
           <div className="div">
             <label className="label">Country* &nbsp;</label>
             <br />
-            <select name="country" className="form-control">
-              <option>INDIA</option>
+            <select name="country" className="form-control" onChange={(e) => setValue(e.target.value)} id="country" value={value} >
+    <option>--Select Country--</option>
+                   {country.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
           
@@ -50,9 +129,11 @@ export default function Product() {
           <div className="div">
             <label className="label">Frequency* &nbsp;</label>
             <br />
-            <select name="frequency" className="form-control">
-              <option>Monthly</option>
-              <option>Quarterly</option>
+            <select name="frequency" className="form-control" id="frequency">
+    <option>--Select Frequency--</option>
+                   {frequencys.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
           
@@ -81,9 +162,11 @@ export default function Product() {
           <div className="div">
             <label className="label">Collection Type *&nbsp;</label>
             <br />
-            <select name="period" className="form-control">
-              <option>RA</option>
-              <option>RES</option>
+            <select name="collection" className="form-control"  id="collection">
+    <option>--Select Collection--</option>
+                   {collections.map(items => (
+        <option key={items} value={items}>{items}</option>
+        ))}
             </select>
           </div>
         
@@ -124,7 +207,7 @@ export default function Product() {
          
           <div className="div">
             <br />
-            <button className="btn_1 btnsearch">SEARCH</button>
+            <button className="btn_1 btnsearch" onClick={searchRecord}>SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
             <button className="btn_2 resetbtn">RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
@@ -180,54 +263,28 @@ export default function Product() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                  <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                  <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                {search.length > 0 ? search.map((item) => (
+                                <tr>
+                                    <td>{item.CountryId}</td>
+                                    <td>{item.qcte_id}</td>
+                                    <td>{item.qcte}</td>
+                                    <td>{item.clusterId}</td>
+                                    <td>{item.ClusterName}</td>
+                                    <td>{item.AuditorId}</td>
+                                    <td>{item.AuditorName}</td>
+                                    <td>{item.ProfileType}</td>
+                                    <td>{item.ProfileStatus}</td>
+                                    <td>{item.Level}</td>
+                                    <td>{item.TotalPoints}</td>
+                                    <td>{item.monthly_points}</td>
+                                    <td>{item.CountryRanking}</td>
+                                    <td>{item.ClusterRanking}</td>
+              
+                                </tr>
+                                )) :  <div>
+                                <p >No Data Found </p>
+                              </div>}
+                            
                 </tbody>
               </table>
             </div>

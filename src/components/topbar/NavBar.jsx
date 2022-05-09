@@ -4,7 +4,7 @@ import {Announcement,PermDataSetting,GroupAddOutlined,PermIdentity, DehazeOutlin
 
 import React,{useState} from 'react'
 import "./NavBar.css"
-import ReviewIdeas from '../../pages/ReviewIdeas/ReviewIdeas';
+import ReviewIdeas1 from '../../pages/ReviewIdeas/ReviewIdeas1';
 import Clusters from '../../pages/Clusters/Clusters';
 import Configuration1 from '../../pages/Configuration/Configuration1';
 import Auditors from '../../pages/Auditors/Auditors';
@@ -27,7 +27,7 @@ function Sidebar3(props) {
               </div>
               <div id="marquee">
                     <div id="mar-content">
-                      {props.details}
+                      <p> sample text</p>
                     </div>  
                 </div>    
             <div className="topRight">
@@ -84,8 +84,8 @@ function Sidebar3(props) {
           <div>
           
     <Routes >
-    <Route path='/' element={<ReviewIdeas/>} />
-            <Route path='/reviewideas' element={<ReviewIdeas/>} />
+    <Route path='/' element={<ReviewIdeas1/>} />
+            <Route path='/reviewideas' element={<ReviewIdeas1/>} />
             <Route path='/auditors' element={<Auditors/>} />
             <Route path='/clusters' element={<Clusters/>} />
             <Route path='/configuration' element={<Configuration1/>} />

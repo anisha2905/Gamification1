@@ -188,7 +188,7 @@ margin-left: 30px;
 
 #mar-content{
   transform: translateX(100%);
-  animation: moving 25s linear infinite;
+  animation: moving 10s linear infinite;
 }
 
 @keyframes moving {

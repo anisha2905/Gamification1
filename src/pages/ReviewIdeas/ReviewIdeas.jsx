@@ -1,8 +1,6 @@
 import React from 'react'
 import "./ReviewIdeas.css"
 import Footer from '../../components/Footer/Footer'
-import './ReviewIdeas.css'
-
 export default function ReviewIdeas() {
   return (
     <div>

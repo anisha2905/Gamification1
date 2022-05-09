@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import "./AddNews.css"
+// import { formatDate } from "@telerik/kendo-intl";
 import laptop from '../../imgaes/laptop_icon.png';
 import mobile from '../../imgaes/mobile_icon.png';
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,42 +10,60 @@ import Sidebar3 from '../../components/topbar/NavBar'
 export default function AddNews() {
     const [details, setDetails] = useState({title:"", description:""});
     const [date, setDate] = useState({actDate:"", expDate:""});
-    
+    let newDate = new Date().toLocaleDateString();
+    let newDate1 ;
+    // const [ctime,setCtime] = useState(newTime);
     const handleChange = (e) =>{
         setDetails({...details,[e.target.name]: e.target.value})
         setDate({...date,[e.target.name]: e.target.value})
     }
-     
+
+    const resetbtn =()=>{
+        setDetails([...details, {title:"",description:""}])
+        setDate([...date, {actDate:"", expDate:""}])
+    }
+
+    const savebtn=(e)=>{
+        submitHandler(e);
+        notify();
+
+    }
+
     const submitHandler = (e) =>{
         e.preventDefault();
         console.log("Title", details.title);
                 console.log("Description", details.description);
                 console.log("Activation_Date", date.actDate);
                 console.log("Expiration_Date", date.expDate);
-        if((details.actDate)>(details.expDate))
-            {return (toast.error('Act-Date > Exp-Date!', 
-                {   position: "bottom-right",
+                console.log(newDate);
+                // newDate: formatDate(new Date(), 'yyyy-MM-dd')
+                console.log(newDate1);
+            }
+    const notify = () =>{
+        if((date.actDate)>(date.expDate))
+                {return (toast.error('Act-Date > Exp-Date!', 
+                    {   position: "bottom-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined
+                    }))
+                } 
+                else if((date.actDate)=(date.expDate))
+                return (toast.success('Tinker message updated', {
+                    position: "bottom-right",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
-                    progress: undefined
-                }))
-            } else if((details.actDate)=(details.expDate))
-            {return (toast.success('Tinker message updated', {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                })
-                (<Sidebar3 details={details}/>))
-            }
-
-    };
+                    progress: undefined,
+                    })
+                    (<Sidebar3 details={details}/>))
+                
+    }
   return (
       <>
     <div>
@@ -55,7 +74,7 @@ export default function AddNews() {
         
     <div className="main">
     
-    <form className="addnews" onSubmit={submitHandler} autoComplete='off'>
+    <form className="addnews"  autoComplete='off'>
         <div className="icons">
         <input type='checkbox' id="chkbx" tabIndex={0}></input>
             <label className='chkbx-img' id="web-icon">
@@ -78,9 +97,10 @@ export default function AddNews() {
                 <input type='date' id='act-date' name="actDate" required onChange={handleChange}/>
                 <span className='titles'>Expiration Date*</span>
                 <input type='date' id='exp-date' name="expDate" required onChange={handleChange}/>
+                {/* {(date.actDate.length) > 0 && (date.expDate.length) >0 && ({error}) } */}
                 <div className='save'>
-                    <button id='savebtn'>Save</button>
-                    <button id='resetbtn'>Reset</button>
+                    <button id='savebtn' onClick={savebtn}>Save</button>
+                    <button id='resetbtn' onClick={resetbtn}>Reset</button>
                     <ToastContainer />
                 </div> 
                 <div id="marquee">
