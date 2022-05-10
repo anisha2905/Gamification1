@@ -136,7 +136,8 @@ text-align: center;
 
 .topRight {
   display: flex;
-  align-items: center;
+  align-items:flex-start;
+ 
  
 }
 .topbarIcon{

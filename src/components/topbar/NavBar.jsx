@@ -1,6 +1,6 @@
 
 import { Link ,Routes,Route} from 'react-router-dom'
-import {Announcement,PermDataSetting,GroupAddOutlined,PermIdentity, DehazeOutlined, AccountTreeOutlined,LibraryAddCheckOutlined} from '@material-ui/icons'
+import {Announcement,PermDataSetting,GroupAddOutlined,PermIdentity, DehazeOutlined, AccountTreeOutlined,LibraryAddCheckOutlined,MoreVert} from '@material-ui/icons'
 
 import React,{useState} from 'react'
 import "./NavBar.css"
@@ -10,15 +10,33 @@ import Configuration1 from '../../pages/Configuration/Configuration1';
 import Auditors from '../../pages/Auditors/Auditors';
 import AddNews from '../../pages/AddNews/AddNews';
 import { Settings } from '@material-ui/icons';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
+
 
 
 
 function Sidebar3(props) {
 
     const[show,setShow]=useState(false);
+    //logout
+    
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
+    //logout
+    
     
   return (
-      <main className={show ? 'space-toggle' : null}>
+      <main className={show ?'space-toggle' : null}>
           <header className='header'>
           <div className='header-toggle' onClick={() => setShow(!show)}>
                 <DehazeOutlined className='topbarIcon'/>
@@ -32,11 +50,24 @@ function Sidebar3(props) {
                 </div>    
             <div className="topRight">
                 <div className="topbarIconContainer">
-                <AccountTreeOutlined className='topbarlogo1'/>
-                   
+                <AccountTreeOutlined className='topbarlogo'/> 
                     <span className="logo1">System Admin</span> 
                     
-                 <Settings  className='logo1'/> 
+                 <MoreVert id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}/>
+        <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+      >
+          <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
+                
                 </div>
                 
             </div> 

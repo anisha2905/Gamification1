@@ -10,6 +10,8 @@ export default function Configuration1() {
   const [value, setValue] = useState([])
   const [search, setSearch] = useState([])
 
+  
+
   // Table Pagination
   const [page, setPage] = React.useState(0)
   const [rowsPerPage, setRowsPerPage] = React.useState(5)
@@ -68,6 +70,24 @@ export default function Configuration1() {
     document.getElementById('configform').reset()
   }
 
+  function expand() {
+    var configurationcontentid = document.getElementById("configurationcontent");
+    var containerfluidconfigurationid = document.getElementById("containerfluidconfiguration");
+    var tableidnm = document.getElementById("tableid");
+
+    if (configurationcontentid.style.display == "none") {
+      configurationcontentid.style.display = 'block';
+      containerfluidconfigurationid.style.marginTop = '156px';
+      tableidnm.style.height = '219px';
+    }
+    else {
+      configurationcontentid.style.display = 'none';
+      containerfluidconfigurationid.style.marginTop = '0px';
+      tableidnm.style.height = '350px';
+
+    }
+  }
+
   return (
     <>
       <div>
@@ -75,7 +95,7 @@ export default function Configuration1() {
           <h2 className="configTitle">Configuration</h2>
         </div>
         <div>
-          <div className=" configurationcontent">
+          <div className=" configurationcontent" id="configurationcontent">
             <div>
               <form id="configform">
                 <div className="divnew">
@@ -132,19 +152,19 @@ export default function Configuration1() {
           </div>
         </div>
         <div>
-          <div className="container-fluid containerfluidconfiguration">
+          <div className="container-fluid containerfluidconfiguration" id="containerfluidconfiguration">
             <div className="col-lg-12 tablediv">
               <div>
                 <div style={{ paddingTop: '11px' }}>
                   <span className="searchhead">Search Result</span>
                 </div>
                 <div style={{ marginTop: '-25px', textAlign: 'right' }}>
-                  <i className="fa fa-expand"></i>
+                  <i className="fa fa-expand"   id="expandid" onClick={expand}></i>
                 </div>
               </div>
 
               <div className="col-lg-12 div1" style={{ overflowX: 'auto' }}>
-                <table bordered="true">
+                <table id="tableid" bordered="true">
                   <thead>
                     <tr>
                       <th>Country(ID)</th>
