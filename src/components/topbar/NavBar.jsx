@@ -27,7 +27,7 @@ function Sidebar3(props) {
               </div>
               <div id="marquee">
                     <div id="mar-content">
-                      <p> sample text</p>
+                      <p>Sample Text</p>
                     </div>  
                 </div>    
             <div className="topRight">

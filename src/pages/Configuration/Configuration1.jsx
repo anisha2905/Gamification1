@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Configuration.css'
 import { Checkbox } from '@material-ui/core'
-import TablePagination from '@mui/material/TablePagination';
-
+import TablePagination from '@mui/material/TablePagination'
 
 export default function Configuration() {
   const [region, setRegion] = useState([])
@@ -12,20 +11,19 @@ export default function Configuration() {
   const [search, setSearch] = useState([])
 
   // Table Pagination
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [page, setPage] = React.useState(0)
+  const [rowsPerPage, setRowsPerPage] = React.useState(5)
 
   const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
+    setPage(newPage)
+  }
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
+    setRowsPerPage(parseInt(event.target.value, 10))
+    setPage(0)
+  }
 
-
-  //Table Pagination 
+  //Table Pagination
 
   useEffect(() => {
     const getRegion = async () => {
@@ -54,7 +52,7 @@ export default function Configuration() {
     ///setUser(e.target.value);
     console.log(e.target.value)
   }
- 
+
   function searchRecord() {
     fetch(`http://localhost:3000/user?Countryname=${value}`, {
       method: 'GET',
@@ -64,15 +62,10 @@ export default function Configuration() {
         console.log(resp)
       })
     })
-
   }
 
-
-
   function resetRecord() {
-
-    document.getElementById("configform").reset();
-    
+    document.getElementById('configform').reset()
   }
 
   return (
@@ -85,57 +78,56 @@ export default function Configuration() {
           <div className=" configurationcontent">
             <div>
               <form id="configform">
-              <div className="divnew">
-                <label className="label">Region* &nbsp;</label>
-                <br />
+                <div className="divnew">
+                  <label className="label">Region* &nbsp;</label>
+                  <br />
 
-                <select
-                  name="region"
-                  className="form-control"
-                  onChange={(e) => handleregion(e)}
-                >
-                  <option>--Select Region--</option>
-                  {regions.map((items) => (
-                    <option key={items} value={items}>
-                      {items}
-                    </option>
-                  ))}
-                </select>
-                <p></p>
-              </div>
-              &nbsp; &nbsp; &nbsp; &nbsp;
-              <div className="div">
-                <label className="label">Country* &nbsp;</label>
-                <br />
-                <select
-                  name="country"
-                  className="form-control"
-                  onChange={(e) => setValue(e.target.value)}
-                  id="country"
-                  value={value}
-                >
-                  <option>--Select Country--</option>
-                  {country.map((items) => (
-                    <option key={items} value={items}>
-                      {items}
-                    </option>
-                  ))}
-                </select>
-                <p></p>
-              </div>
+                  <select
+                    name="region"
+                    className="form-control"
+                    onChange={(e) => handleregion(e)}
+                  >
+                    <option>--Select Region--</option>
+                    {regions.map((items) => (
+                      <option key={items} value={items}>
+                        {items}
+                      </option>
+                    ))}
+                  </select>
+                  <p></p>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <div className="div">
+                  <label className="label">Country* &nbsp;</label>
+                  <br />
+                  <select
+                    name="country"
+                    className="form-control"
+                    onChange={(e) => setValue(e.target.value)}
+                    id="country"
+                    value={value}
+                  >
+                    <option>--Select Country--</option>
+                    {country.map((items) => (
+                      <option key={items} value={items}>
+                        {items}
+                      </option>
+                    ))}
+                  </select>
+                  <p></p>
+                </div>
               </form>
-              
+
               <div className="div">
-              
                 <button className="btn_1 btnsearch" onClick={searchRecord}>
                   Search
                 </button>
                 &nbsp; &nbsp;
-                <button className="btn_2 resetbtn" onClick={resetRecord}>Reset</button>
+                <button className="btn_2 resetbtn" onClick={resetRecord}>
+                  Reset
+                </button>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               </div>
-              
-              
             </div>
           </div>
         </div>
@@ -168,24 +160,41 @@ export default function Configuration() {
                     </tr>
                   </thead>
 
-                  <tbody  id="tabledata" bordered="true">
+                  <tbody id="tabledata" bordered="true">
                     {search.length > 0 ? (
-                      search.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item, i) => (
-                        <tr key={i}>
-                          <td>{item.Country}</td>
-                          <td>{item.ProcessId}</td>
-                          <td>{item.ProcessName}</td>
-                          <td >
-                          <Checkbox theme="bootstrap-checkbox" value={true} disabled></Checkbox>
-                          </td>
-                          <td>{item.FTE}</td>
-                          <td>{item.Freelancer}</td>
-                          <td>{item.RA}</td>
-                          <td>{item.RES}</td>
-                          <td>{item.SFA}</td>
-                          <td>{item.NSO}</td>
-                        </tr>
-                      ))
+                      search
+                        .slice(
+                          page * rowsPerPage,
+                          page * rowsPerPage + rowsPerPage,
+                        )
+                        .map((item, i) => (
+                          <tr key={i}>
+                            <td>{item.Country}</td>
+                            <td>{item.ProcessId}</td>
+                            <td>{item.ProcessName}</td>
+                            <td>
+                              <Checkbox id={item.Enable}></Checkbox>
+                            </td>
+                            <td>
+                              <Checkbox id={item.FTE}></Checkbox>
+                            </td>
+                            <td>
+                              <Checkbox id={item.Freelancer}></Checkbox>
+                            </td>
+                            <td>
+                              <Checkbox id={item.RA}></Checkbox>
+                            </td>
+                            <td>
+                              <Checkbox id={item.RES}></Checkbox>
+                            </td>
+                            <td>
+                              <Checkbox id={item.SFA}></Checkbox>
+                            </td>
+                            <td>
+                              <Checkbox id={item.NSO}></Checkbox>
+                            </td>
+                          </tr>
+                        ))
                     ) : (
                       <div>
                         <p>No Data Found </p>
@@ -195,14 +204,14 @@ export default function Configuration() {
                 </table>
               </div>
               <TablePagination
-          rowsPerPageOptions={[5, 10, 15]}
-          component="div"
-          count={search.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
+                rowsPerPageOptions={[5, 10, 15]}
+                component="div"
+                count={search.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage}
+              />
             </div>
           </div>
           <div>
