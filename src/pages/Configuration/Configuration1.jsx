@@ -3,7 +3,7 @@ import './Configuration.css'
 import { Checkbox } from '@material-ui/core'
 import TablePagination from '@mui/material/TablePagination'
 
-export default function Configuration() {
+export default function Configuration1() {
   const [region, setRegion] = useState([])
   const [regionid, setRegionid] = useState()
   const [country, setCountry] = useState([])
