@@ -1,5 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import "./Clusters.css"
+import { CSVLink } from "react-csv";
+
+const datanew = [
+  { clusterId: "265047", Country: "BRAZIL", ClusterName: "12-B", StoreRecruitmentTarget: "0" },
+  { clusterId: "271047", Country: "BRAZIL", ClusterName: "01-C", StoreRecruitmentTarget: "0" },
+  { clusterId: "471047", Country: "BRAZIL", ClusterName: "10-C", StoreRecruitmentTarget: "1" },
+  { clusterId: "264052", Country: "BRAZIL", ClusterName: "13-B", StoreRecruitmentTarget: "0" },
+
+];
+
+const headers = [
+  { label: "cluster Id", key: "clusterId" },
+  { label: "Country Name", key: "Country" },
+  { label: "Cluster Name", key: "ClusterName" },
+  { label: "StoreRecruitmentTarget", key: "StoreRecruitmentTarget" }
+];
+
+const csvReport = {
+  data: datanew,
+  headers: headers,
+  filename: 'Cluster_Report.csv'
+};
 
 export default function Clusters() {
   // const [usersdata, setUser] = useState([])
@@ -35,7 +57,7 @@ export default function Clusters() {
 
     }
 
-  else {
+    else {
 
       fetch(`http://localhost:3000/ClusterDetails?CountryId=${record}`, {
         method: "GET"
@@ -82,7 +104,7 @@ export default function Clusters() {
         var select = document.getElementById("country");
         // Logic to remove all options from the select dropdown
         var length = select.options.length;
-        for (i = length-1; i > 0; i--) {
+        for (i = length - 1; i > 0; i--) {
           select.options[i] = null;
         }
         // Logic to remove all options from the select dropdown
@@ -101,7 +123,23 @@ export default function Clusters() {
     })
 
   }
+  function expand() {
+    var clustercontentid = document.getElementById("clustercontent");
+    var containerfluidclusterid = document.getElementById("containerfluidcluster");
+    var tableidnm = document.getElementById("tableid");
 
+    if (clustercontentid.style.display == "none") {
+      clustercontentid.style.display = 'block';
+      containerfluidclusterid.style.marginTop = '156px';
+      tableidnm.style.height = '219px';
+    }
+    else {
+      clustercontentid.style.display = 'none';
+      containerfluidclusterid.style.marginTop = '0px';
+      tableidnm.style.height = '350px';
+
+    }
+  }
   return (
     <div >
       <div className="clusterTitleContainer">
@@ -109,7 +147,7 @@ export default function Clusters() {
         <h3 className="clusterTitle" />
       </div>
       <div>
-        <div className=" clustercontent">
+        <div className="clustercontent" id="clustercontent">
           <div>
             <form id="clusterform">
               <div className="divnew">
@@ -136,7 +174,7 @@ export default function Clusters() {
                 <label className="label">Country* &nbsp;</label><br />
                 <select class="form-control select"
                   onChange={(e) => setRecord(e.target.value)} id="country" value={record} >
-                 <option value="">Select country</option>
+                  <option value="">Select country</option>
                 </select><br />
                 {countrynmErr ? <span className="errormessage">Field is required</span> : ""}<br />
               </div>
@@ -147,7 +185,8 @@ export default function Clusters() {
                 <button className="btn_2 resetbtn" onClick={resetform}>Reset</button>
                 &nbsp; &nbsp;
 
-                <button className="btn_3 downloadbtn">Download Template</button>
+                <button className="btn_3 downloadbtn"><CSVLink {...csvReport} style={{ color: "#fff" }}>Download Template</CSVLink></button>
+                {/* <CSVLink data={datanew}>Download me</CSVLink> */}
                 &nbsp; &nbsp; &nbsp; &nbsp;
               </div>
             </form>
@@ -161,7 +200,7 @@ export default function Clusters() {
         </div>
       </div>
       <div>
-        <div className='container-fluid containerfluidcluster'>
+        <div className='container-fluid containerfluidcluster' id="containerfluidcluster">
 
           <div className="col-lg-12 tablediv">
             <div>
@@ -170,7 +209,7 @@ export default function Clusters() {
               </div>
               <div style={{ marginTop: "-25px", textAlign: "right" }}>
                 <span style={{ marginRight: "0.7rem", color: "#86898b" }}><button className="savebtn"><i className="fa fa-check" aria-hidden="true"></i> Save</button></span>
-                <i className="fa fa-expand"></i>
+                <i className="fa fa-expand" id="expandid" onClick={expand} ></i>
               </div>
             </div>
 
@@ -178,7 +217,7 @@ export default function Clusters() {
 
 
 
-              <table bordered="true"  >
+              <table id="tableid" bordered="true">
                 <thead>
                   <tr>
                     <th><input type="checkbox" /></th>
@@ -216,9 +255,9 @@ export default function Clusters() {
                       <td>{item.RecruitmentTargetUpdatedBy}</td>
                       <td>{item.RecruitmentTargetUpdatedOn}</td>
                     </tr>
-                  )) :  <div>
-                  <p >No Data avaliable</p>
-                </div>}
+                  )) : <div>
+                    <p >No Data avaliable</p>
+                  </div>}
 
                 </tbody>
 
