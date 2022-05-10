@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './Configuration.css'
 import { Checkbox } from '@material-ui/core'
 import TablePagination from '@mui/material/TablePagination'
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { useForm } from "react-hook-form";
 
 export default function Configuration1() {
   const [region, setRegion] = useState([])
@@ -9,8 +11,8 @@ export default function Configuration1() {
   const [country, setCountry] = useState([])
   const [value, setValue] = useState([])
   const [search, setSearch] = useState([])
-
-  
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   // Table Pagination
   const [page, setPage] = React.useState(0)
@@ -97,7 +99,7 @@ export default function Configuration1() {
         <div>
           <div className=" configurationcontent" id="configurationcontent">
             <div>
-              <form id="configform">
+              <form id="configform" onSubmit={handleSubmit(onSubmit)}>
                 <div className="divnew">
                   <label className="label">Region* &nbsp;</label>
                   <br />
@@ -106,6 +108,7 @@ export default function Configuration1() {
                     name="region"
                     className="form-control"
                     onChange={(e) => handleregion(e)}
+                    {...register("regionFeild", { required: true })}
                   >
                     <option>--Select Region--</option>
                     {regions.map((items) => (
@@ -114,7 +117,7 @@ export default function Configuration1() {
                       </option>
                     ))}
                   </select>
-                  <p></p>
+                  {errors.regionFeild?.type === 'required' && "First name is required"}
                 </div>
                 &nbsp; &nbsp; &nbsp; &nbsp;
                 <div className="div">
@@ -126,6 +129,7 @@ export default function Configuration1() {
                     onChange={(e) => setValue(e.target.value)}
                     id="country"
                     value={value}
+                    {...register("countryfeild", { required: true })}
                   >
                     <option>--Select Country--</option>
                     {country.map((items) => (
@@ -134,7 +138,7 @@ export default function Configuration1() {
                       </option>
                     ))}
                   </select>
-                  <p></p>
+                  {errors.countryFeild?.type === 'required' && "Feild is required"}
                 </div>
               </form>
 
@@ -193,25 +197,29 @@ export default function Configuration1() {
                             <td>{item.ProcessId}</td>
                             <td>{item.ProcessName}</td>
                             <td>
-                              <Checkbox id={item.Enable}></Checkbox>
+                            <FormControlLabel disabled control={<Checkbox checked name="checkedE" />} id={item.Enable}/>
+                              
                             </td>
                             <td>
-                              <Checkbox id={item.FTE}></Checkbox>
+                            <FormControlLabel disabled control={<Checkbox checked name="checkedE" />} id={item.FTE}/>
+                              
                             </td>
                             <td>
-                              <Checkbox id={item.Freelancer}></Checkbox>
+                            <FormControlLabel disabled control={<Checkbox checked name="checkedE" />} id={item.Freelancer}/>
+                             
                             </td>
                             <td>
-                              <Checkbox id={item.RA}></Checkbox>
+                              <Checkbox id={item.RA} value={false} disabled></Checkbox>
                             </td>
                             <td>
-                              <Checkbox id={item.RES}></Checkbox>
+                            <FormControlLabel disabled control={<Checkbox checked name="checkedE" />} id={item.RES}/>
+        
                             </td>
                             <td>
                               <Checkbox id={item.SFA}></Checkbox>
                             </td>
                             <td>
-                              <Checkbox id={item.NSO}></Checkbox>
+                            <FormControlLabel disabled control={<Checkbox checked name="checkedE" />} id={item.SFA}/>
                             </td>
                           </tr>
                         ))
