@@ -13,9 +13,9 @@ import { Settings } from '@material-ui/icons';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {useContext} from 'react';
-import Ticker from '../../pages/AddNews/Ticker';
-import TickerContext from '../../contexts/TickerContext';
+// import {useContext} from 'react';
+// import Ticker from '../../pages/AddNews/Ticker';
+// import TickerContext from '../../contexts/TickerContext';
 
 
 
@@ -32,7 +32,7 @@ function Sidebar3() {
     const handleClose = () => {
       setAnchorEl(null);
     };
-    const [tickers, setTickers]= useContext(TickerContext);
+    // const [tickers, setTickers]= useContext(TickerContext);
     //logout
     
     
@@ -50,9 +50,9 @@ function Sidebar3() {
                       <p>{tdes}</p>
                     </div>  
                 </div>     */}
-                <div>{
+                {/* <div>{
                 tickers.map(ticker =>(<Ticker title={ticker.title} description={ticker.description}/>))
-                }</div>
+                }</div> */}
 
               
             <div className="topRight">
