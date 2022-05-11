@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import './Auditors.css'
+import TablePagination from '@mui/material/TablePagination'
 
 export default function Product() {
   const [region, setRegion]= useState([]);
@@ -10,7 +11,38 @@ export default function Product() {
   const [frequency, setFrequency]= useState([]);
   const [collection, setCollection]= useState([]);
 
-  
+  // Table Pagination
+  const [page, setPage] = React.useState(0)
+  const [rowsPerPage, setRowsPerPage] = React.useState(5)
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage)
+  }
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10))
+    setPage(0)
+  }
+
+  //Table Pagination
+
+  function expand() {
+    var auditorscontentid = document.getElementById('auditorcontent')
+    var containerfluidauditorsid = document.getElementById(
+      'containerfluidauditor',
+    )
+    var tableidnm = document.getElementById('tableid')
+
+    if (auditorscontentid .style.display === 'none') {
+      auditorscontentid .style.display = 'block'
+      containerfluidauditorsid.style.marginTop = '156px'
+      tableidnm.style.height = '219px'
+    } else {
+      auditorscontentid .style.display = 'none'
+      containerfluidauditorsid.style.marginTop = '0px'
+      tableidnm.style.height = '350px'
+    }
+  }
   
   
 
@@ -92,7 +124,7 @@ console.log(collection);
       </div>
 
       <form>
-      <div className='auditorcontent'>
+      <div className='auditorcontent' id="auditorcontent">
         <div className="content_1">
           <div className="div">
             <label className="label">Region* &nbsp;</label>
@@ -228,7 +260,7 @@ console.log(collection);
 
 
       <div className="content_1" style={{width: "98%"}}>
-        <div className="container-fluid containerfluidnew">
+        <div className="container-fluid containerfluidnew"  id="containerfluidauditor">
           <div className="col-lg-12 tablediv">
             <div>
               <div style={{ paddingTop: '11px' }}>
@@ -242,12 +274,12 @@ console.log(collection);
                   <span>**</span>| Get Activation Code
                 </span>
 
-                <i className="fa fa-expand"></i>
+                <i className="fa fa-expand" onClick={expand}></i>
               </div>
             </div>
 
             <div className="col-lg-12 div1" style={{ overflowX: 'auto' }}>
-              <table bordered>
+              <table bordered="true" id="tableid">
                 <thead>
                   <tr>
                     <th>Country(ID)</th>
@@ -267,7 +299,10 @@ console.log(collection);
                   </tr>
                 </thead>
                 <tbody>
-                {search.length > 0 ? search.map((item) => (
+                {search.length > 0 ? search.slice(
+                        page * rowsPerPage,
+                        page * rowsPerPage + rowsPerPage,
+                      ).map((item) => (
                                 <tr>
                                     <td>{item.CountryId}</td>
                                     <td>{item.qcte_id}</td>
@@ -292,25 +327,16 @@ console.log(collection);
                 </tbody>
               </table>
             </div>
-            <div className="tablefooter">
-              <span
-                className="fa fa-step-backward linkicon"
-                aria-hidden="true"
-              ></span>
-              <span
-                className="fa fa-caret-left linkicon"
-                aria-hidden="true"
-              ></span>
-              <span
-                className="fa fa-caret-right linkicon"
-                aria-hidden="true"
-              ></span>
-              <span
-                className="fa fa-step-forward linkicon"
-                aria-hidden="true"
-              ></span>
-              <div style={{ float: 'right' }}>0 - 0 of 0 items</div>
-            </div>
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 15]}
+              component="div"
+              count={search.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+            />
+            
           </div>
         </div>
         <div>

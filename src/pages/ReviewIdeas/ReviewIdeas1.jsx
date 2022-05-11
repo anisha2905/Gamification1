@@ -4,7 +4,6 @@ import "./ReviewIdeas.css"
 
 export default function ReviewIdeas1() {
   const [region, setRegion]= useState([]);
-  const [regionid, setRegionid]= useState();
   const [country, setCountry]= useState([]);
   const [value, setValue] = useState([]);
   const [search, setSearch] = useState([]);

@@ -205,7 +205,7 @@ export default function Clusters() {
                   onChange={(e) => setRecord(e.target.value)} id="country" value={record} >
                   <option value="">Select country</option>
                 </select><br />
-                {countrynmErr ? <span className="errormessage">Field is required</span> : ""}<br />
+                {countrynmErr ? <span className="errormessage">Field is required</span>:""}<br />
               </div>
               &nbsp; &nbsp; &nbsp; &nbsp;
               <div className="div"><br />
