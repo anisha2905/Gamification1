@@ -2,7 +2,7 @@
 import { Link ,Routes,Route} from 'react-router-dom'
 import {Announcement,PermDataSetting,GroupAddOutlined,PermIdentity, DehazeOutlined, AccountTreeOutlined,LibraryAddCheckOutlined,MoreVert} from '@material-ui/icons'
 
-import React,{useState} from 'react'
+import React,{useState} from "react";
 import "./NavBar.css"
 import ReviewIdeas1 from '../../pages/ReviewIdeas/ReviewIdeas1';
 import Clusters from '../../pages/Clusters/Clusters';
@@ -13,16 +13,17 @@ import { Settings } from '@material-ui/icons';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import {useContext} from 'react';
+import Ticker from '../../pages/AddNews/Ticker';
+import TickerContext from '../../contexts/TickerContext';
 
 
 
 
-
-function Sidebar3(props) {
+function Sidebar3() {
 
     const[show,setShow]=useState(false);
     //logout
-    
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -31,7 +32,7 @@ function Sidebar3(props) {
     const handleClose = () => {
       setAnchorEl(null);
     };
-
+    const [tickers, setTickers]= useContext(TickerContext);
     //logout
     
     
@@ -43,11 +44,17 @@ function Sidebar3(props) {
                 <AccountTreeOutlined className='topbarlogo'/>
               <span className="logo">Gamification</span>
               </div>
-              <div id="marquee">
+              {/* <div id="marquee">
                     <div id="mar-content">
-                      <p>Sample Text</p>
+                      <p>{ttitle}</p>
+                      <p>{tdes}</p>
                     </div>  
-                </div>    
+                </div>     */}
+                <div>{
+                tickers.map(ticker =>(<Ticker title={ticker.title} description={ticker.description}/>))
+                }</div>
+
+              
             <div className="topRight">
                 <div className="topbarIconContainer">
                 <AccountTreeOutlined className='topbarlogo'/> 
@@ -130,4 +137,4 @@ function Sidebar3(props) {
   )
 }
 
-export default Sidebar3
+export default Sidebar3 

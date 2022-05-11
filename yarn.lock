@@ -9659,17 +9659,10 @@
   "resolved" "https://registry.npmjs.org/react-csv/-/react-csv-2.2.2.tgz"
   "version" "2.2.2"
 
-<<<<<<< HEAD
-"react-dev-utils@^12.0.1":
-  "integrity" "sha512-84Ivxmr17KjUupyqzFode6xKhjwuEJDROWKJy/BthkL7Wn6NJ8h4WE6k/exAv6ImS+0oZLRRW5j/aINMHyeGeQ=="
-  "resolved" "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-12.0.1.tgz"
-  "version" "12.0.1"
-=======
 "react-dev-utils@^7.0.1":
   "integrity" "sha512-zJnqqb0x6gd63E3xoz5pXAxBPNaW75Hyz7GgQp0qPhMroBCRQtRvG67AoTZZY1z4yCYVJQZAfQJFdnea0Ujbug=="
   "resolved" "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-7.0.5.tgz"
   "version" "7.0.5"
->>>>>>> 8b824b8b2f9e819feac35ee303737c8305086eef
   dependencies:
     "@babel/code-frame" "7.0.0"
     "address" "1.0.3"

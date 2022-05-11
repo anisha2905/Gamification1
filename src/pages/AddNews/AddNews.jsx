@@ -1,17 +1,22 @@
 import React,{useState} from "react";
+// import React, {useContext} from 'react';
+// import { TickerContext } from "../../contexts/tickerContext";
 import "./AddNews.css"
 // import { formatDate } from "@telerik/kendo-intl";
 import laptop from '../../imgaes/laptop_icon.png';
 import mobile from '../../imgaes/mobile_icon.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Sidebar3 from '../../components/topbar/NavBar'
+// import Sidebar3 from '../../components/topbar/NavBar'
 
 export default function AddNews() {
     const [details, setDetails] = useState({title:"", description:""});
     const [date, setDate] = useState({actDate:"", expDate:""});
+    const [msg, setMsg] = useState(false);
+    
     let newDate = new Date().toLocaleDateString();
-    let newDate1 ;
+    // let msg = "success";
+    // let newDate1 ;
     // const [ctime,setCtime] = useState(newTime);
     const handleChange = (e) =>{
         setDetails({...details,[e.target.name]: e.target.value})
@@ -37,7 +42,7 @@ export default function AddNews() {
                 console.log("Expiration_Date", date.expDate);
                 console.log(newDate);
                 // newDate: formatDate(new Date(), 'yyyy-MM-dd')
-                console.log(newDate1);
+                // console.log(newDate1);
             }
     const notify = () =>{
         if((date.actDate)>(date.expDate))
@@ -52,7 +57,7 @@ export default function AddNews() {
                     }))
                 } 
                 else if((date.actDate)=(date.expDate))
-                return (toast.success('Tinker message updated', {
+                return (toast.success('Ticker message updated', {
                     position: "bottom-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -60,10 +65,10 @@ export default function AddNews() {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    })
-                    (<Sidebar3 details={details}/>))
+                    }))
+                    setMsg(true);
                 
-    }
+    };
   return (
       <>
     <div>
@@ -103,13 +108,14 @@ export default function AddNews() {
                     <button id='resetbtn' onClick={resetbtn}>Reset</button>
                     <ToastContainer />
                 </div> 
-                <div id="marquee">
+                {/* <div id="marquee">
                     <div id="mar-content">
                       {details.title}
                       {details.description}
                       </div>
-                </div>
+                </div> */}
             </div>
+            {/* {msg.length > 0 && <div>{<tickerMsg title={details.title} description={details.description}/>}</div> } */}
         </form>
     </div>
     </div>
