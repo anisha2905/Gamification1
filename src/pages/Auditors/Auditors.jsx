@@ -90,14 +90,15 @@ console.log(collection);
         <h3 className="auditTitle" />
       </div>
       </div>
-    
+
+      <form>
       <div className='auditorcontent'>
         <div className="content_1">
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
-            <select name="region" className="form-control" onChange={(e)=>handleregion(e)}>
-                   <option>--Select Region--</option>
+            <select name="region" className="form-control" required onChange={(e)=>handleregion(e)}>
+                   <option value=""disabled selected>--Select Region--</option>
                    {regions.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
@@ -107,8 +108,8 @@ console.log(collection);
           <div className="div">
             <label className="label">Country* &nbsp;</label>
             <br />
-            <select name="country" className="form-control" onChange={(e) => setValue(e.target.value)} id="country" value={value} >
-    <option>--Select Country--</option>
+            <select name="country" className="form-control" required onChange={(e) => setValue(e.target.value)} id="country" value={value} >
+    <option value=""disabled selected>--Select Country--</option>
                    {country.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
@@ -118,7 +119,8 @@ console.log(collection);
           <div className="div">
             <label className="label">Year* &nbsp;</label>
             <br />
-            <select name="year" className="form-control">
+            <select name="year" className="form-control" required>
+              <option value=""disabled selected>--Select Year</option>
               <option>2019</option>
               <option>2020</option>
               <option>2021</option>
@@ -129,8 +131,8 @@ console.log(collection);
           <div className="div">
             <label className="label">Frequency* &nbsp;</label>
             <br />
-            <select name="frequency" className="form-control" id="frequency">
-    <option>--Select Frequency--</option>
+            <select name="frequency" className="form-control" id="frequency" required>
+    <option value=""disabled selected>--Select Frequency--</option>
                    {frequencys.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
@@ -140,7 +142,8 @@ console.log(collection);
           <div className="div">
             <label className="label">Period* &nbsp;</label>
             <br/>
-            <select name="period" className="form-control">
+            <select name="period" className="form-control" required>
+              <option value=""disabled selected>--Select Month--</option>
               <option>January</option>
               <option>February</option>
               <option>March</option>
@@ -162,8 +165,8 @@ console.log(collection);
           <div className="div">
             <label className="label">Collection Type *&nbsp;</label>
             <br />
-            <select name="collection" className="form-control"  id="collection">
-    <option>--Select Collection--</option>
+            <select name="collection" className="form-control"  id="collection" required>
+    <option value=""disabled selected>--Select Collection--</option>
                    {collections.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
@@ -209,7 +212,7 @@ console.log(collection);
             <br />
             <button className="btn_1 btnsearch" onClick={searchRecord}>SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2 resetbtn">RESET</button>
+            <button className="btn_2 resetbtn" type='reset'>RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
             <button className="btn_3 downloadbtn">EXPORT</button>
            
@@ -220,6 +223,7 @@ console.log(collection);
         
         
       </div>
+      </form>
 
 
 
