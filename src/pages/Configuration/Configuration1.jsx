@@ -182,7 +182,8 @@ export default function Configuration1() {
                     <br />
                   </p>
                 </div>
-                <br />
+                </form>
+                
                 <div className="div">
                   <button type="button"    className="btn_1 btnsearch" onClick={searchRecord}>
                     Search
@@ -193,7 +194,6 @@ export default function Configuration1() {
                   </button>
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 </div>
-              </form>
             </div>
           </div>
         </div>

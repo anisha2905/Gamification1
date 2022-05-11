@@ -20,7 +20,7 @@ export default function ReviewIdeas1() {
   }
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10))
+    setRowsPerPage(parseInt(event.target.value,5))
     setPage(0)
   }
 
@@ -155,7 +155,7 @@ export default function ReviewIdeas1() {
                   ''
                 )}
               </div>
-              &nbsp; &nbsp; &nbsp; &nbsp;
+              
               <div className="div">
                 <label className="label">Country* &nbsp;</label>
                 <br />
@@ -182,7 +182,7 @@ export default function ReviewIdeas1() {
                   <br />
                 </p>
               </div>
-              &nbsp; &nbsp; &nbsp; &nbsp;
+             
               <div className="div">
                 <label className="label">Collection Type *&nbsp;</label>
                 <br />
@@ -192,18 +192,18 @@ export default function ReviewIdeas1() {
                 </select>
               </div>
               <div className="div">
-                <label className="label">Category&nbsp;</label>
+                <label>Category&nbsp;</label>
                 <br />
                 <select name="category" className="form-control"></select>
               </div>
-              <div className="div" style={{ marginTop: '-10px' }}>
-                <label className="label">
+              <div className="div" >
+                <label>
                   Cluster Id&nbsp;
                   <br />
                 </label>
                 <select name="cluster-id" className="form-control"></select>
               </div>
-              <div className="div">
+              <div  >
                 <label className="ab-c">Cluster Name&nbsp;</label>
                 <br />
                 <textarea
@@ -211,7 +211,7 @@ export default function ReviewIdeas1() {
                   className="form-control"
                 ></textarea>
               </div>
-              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+              
               <div className="div">
                 <label className="ab-c">QCTE ID&nbsp;</label>
                 <br />
