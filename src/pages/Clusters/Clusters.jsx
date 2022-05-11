@@ -207,8 +207,9 @@ export default function Clusters() {
                 </select><br />
                 {countrynmErr ? <span className="errormessage">Field is required</span>:""}<br />
               </div>
+              </form>
               &nbsp; &nbsp; &nbsp; &nbsp;
-              <div className="div"><br />
+              <div className="div">
                 <button type='button' className="btn_1 btnsearch" onClick={searchRecord}>Search</button>
                 &nbsp; &nbsp;
                 <button className="btn_2 resetbtn" onClick={resetform}>Reset</button>
@@ -218,7 +219,7 @@ export default function Clusters() {
                 {/* <CSVLink data={datanew}>Download me</CSVLink> */}
                 &nbsp; &nbsp; &nbsp; &nbsp;
               </div>
-            </form>
+           
           </div>
           <br />
           <div className="k-dropzone" style={{ marginTop: "43px" }}>
