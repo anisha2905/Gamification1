@@ -336,7 +336,6 @@ console.log(collection);
               onPageChange={handleChangePage}
               onRowsPerPageChange={handleChangeRowsPerPage}
             />
-            
           </div>
         </div>
         <div>

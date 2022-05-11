@@ -136,9 +136,10 @@ export default function Configuration1() {
                   <br />
 
                   <select
-                    value={regionid}
+                  name="region"
+                 value={regionid}
                     className="form-control"
-                    onChange={(e) => handleregion(e)}
+                    onChange={(e) => {handleregion(e); setRegionid(e.target.value)}}
                   >
                     <option>--Select Region--</option>
                     {regions.map((items) => (
