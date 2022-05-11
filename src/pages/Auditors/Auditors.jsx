@@ -149,7 +149,7 @@ console.log(collection);
           </div>
           
           <div className="div">
-            <label className="label">Year* &nbsp;</label>
+            <label >Year* &nbsp;</label>
             <br />
             <select name="year" className="form-control" required>
               <option value=""disabled selected>--Select Year</option>
@@ -161,7 +161,7 @@ console.log(collection);
           </div>
           
           <div className="div">
-            <label className="label">Frequency* &nbsp;</label>
+            <label >Frequency* &nbsp;</label>
             <br />
             <select name="frequency" className="form-control" id="frequency" required>
     <option value=""disabled selected>--Select Frequency--</option>
@@ -195,7 +195,7 @@ console.log(collection);
             </select>
           </div>
           <div className="div">
-            <label className="label">Collection Type *&nbsp;</label>
+            <label >Collection Type *&nbsp;</label>
             <br />
             <select name="collection" className="form-control"  id="collection" required>
     <option value=""disabled selected>--Select Collection--</option>
