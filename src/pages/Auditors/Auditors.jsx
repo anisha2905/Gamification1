@@ -1,15 +1,22 @@
 import React,{useEffect,useState} from 'react'
 import './Auditors.css'
 import TablePagination from '@mui/material/TablePagination'
+import { useForm } from 'react-hook-form';
 
 export default function Product() {
   const [region, setRegion]= useState([]);
-  const [regionid, setRegionid]= useState();
+  const [regionid, setRegionid]= useState('');
   const [country, setCountry]= useState([]);
-  const [value, setValue] = useState([]);
+  const [value, setValue] = useState('');
   const [search, setSearch] = useState([]);
   const [frequency, setFrequency]= useState([]);
+  const [frequencyid, setFrequencyid]= useState('')
   const [collection, setCollection]= useState([]);
+  const [collectionid,setCollectionid]= useState('')
+  const [regionErr, setregionErr] = useState(false)
+  const [countrynmErr, setcountrynmErr] = useState(false)
+  const [frequencyErr, setfrequencyErr]= useState(false)
+  const [collectionErr, setcollectionErr]= useState(false)
 
   // Table Pagination
   const [page, setPage] = React.useState(0)
@@ -35,7 +42,7 @@ export default function Product() {
 
     if (auditorscontentid .style.display === 'none') {
       auditorscontentid .style.display = 'block'
-      containerfluidauditorsid.style.marginTop = '156px'
+      containerfluidauditorsid.style.marginTop = '10px'
       tableidnm.style.height = '219px'
     } else {
       auditorscontentid .style.display = 'none'
@@ -62,7 +69,7 @@ console.log(region);
 
 const handleregion=(e)=>{
     e.preventDefault();
-    let countries=region.filter(country=>country.Region=== e.target.value);
+    let countries=region.filter((country)=>country.Region=== e.target.value);
     console.log(countries);
     countries=[...new Set(countries.map(item=>item.Country))];
     countries.sort();
@@ -101,19 +108,72 @@ let collections = [...new Set(collection.map(item=> item.Collection))];
 collections.sort();
 console.log(collection);
 
-  function searchRecord() {
-      fetch(`http://localhost:3000/Auditors?Country=${value}`, {
-        method: "GET"
 
+  function searchRecord() {
+    if (
+      regionid === 'null' ||
+      regionid === '' ||
+      value === 'null' ||
+      value === '' ||
+      frequencyid === 'null' ||
+      frequencyid === '' ||
+      collectionid ==='null'||
+      collectionid ===''
+    ) {
+      setcountrynmErr(true)
+      setregionErr(true)
+      setfrequencyErr(true)
+      setcollectionErr(true)
+    } else {
+      setregionErr(false)
+      setcountrynmErr(false)
+      setfrequencyErr(false)
+      setcollectionErr(false)
+    }
+    if (regionid === 'null' || regionid === '') {
+      setregionErr(true)
+    } else {
+      setregionErr(false)
+    }
+    if (value === 'null' || value === '') {
+      setcountrynmErr(true)
+    } else {
+      setcountrynmErr(false)
+    }
+    if (frequencyid === 'null' || frequencyid === '') {
+      setfrequencyErr(true)
+    } else {
+      setfrequencyErr(false)
+    }
+    if (
+      regionid === '' ||
+      regionid === null ||
+      typeof regionid === 'undefined' ||
+      value === '' ||
+      value === null ||
+      typeof value === 'undefined'||
+      frequencyid === '' ||
+      frequencyid === null ||
+      typeof frequencyid === 'undefined'||
+      collectionid === '' ||
+      collectionid === null ||
+      typeof collectionid === 'undefined'
+    ) {
+    } else {
+      fetch(`http://localhost:3000/Auditors?Country=${value}`, {
+        method: 'GET',
       }).then((result) => {
         result.json().then((resp) => {
           setSearch(resp)
           console.log(resp)
-
         })
       })
-    
+    }
   }
+  function resetRecord() {
+    document.getElementById('audit').reset()
+  }
+
   return (
     <div>
          <div className="auit-head">
@@ -123,36 +183,52 @@ console.log(collection);
       </div>
       </div>
 
-      <form>
       <div className='auditorcontent' id="auditorcontent">
         <div className="content_1">
+          <form id="audit">
+          <div className="content_1">
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
-            <select name="region" className="form-control" required onChange={(e)=>handleregion(e)}>
-                   <option value=""disabled selected>--Select Region--</option>
+            <select name="region" value={regionid} className="form-control" onChange={(e)=>{handleregion(e); e.preventDefault();setRegionid(e.target.value)}}>
+                   <option value=''>--Select Region--</option>
                    {regions.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
+            <p>
+                    {regionErr ? (
+                      <span className="errormessage">Field is required</span>
+                    ) : (
+                      ''
+                    )}
+                  </p>
           </div>
           &nbsp; &nbsp; &nbsp; &nbsp;
           <div className="div">
             <label className="label">Country* &nbsp;</label>
             <br />
-            <select name="country" className="form-control" required onChange={(e) => setValue(e.target.value)} id="country" value={value} >
-    <option value=""disabled selected>--Select Country--</option>
+            <select name="country" className="form-control" onChange={(e) =>{e.preventDefault();setValue(e.target.value)}} id="country" value={value} >
+    <option value=''>--Select Country--</option>
                    {country.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
+            <p>
+                    {countrynmErr ? (
+                      <span className="errormessage">Field is required</span>
+                    ) : (
+                      ''
+                    )}
+                  </p>
           </div>
           
+          
           <div className="div">
-            <label >Year* &nbsp;</label>
+            <label >Year &nbsp;</label>
             <br />
-            <select name="year" className="form-control" required>
-              <option value=""disabled selected>--Select Year</option>
+            <select name="year" className="form-control">
+              <option value="Select Year">--Select Year</option>
               <option>2019</option>
               <option>2020</option>
               <option>2021</option>
@@ -161,21 +237,28 @@ console.log(collection);
           </div>
           
           <div className="div">
-            <label >Frequency* &nbsp;</label>
+            <label className='label'>Frequency* &nbsp;</label>
             <br />
-            <select name="frequency" className="form-control" id="frequency" required>
-    <option value=""disabled selected>--Select Frequency--</option>
+            <select value={frequencyid}name="frequency" className="form-control" id="frequency" onChange={(e) =>{ e.preventDefault();setFrequencyid(e.target.value)}}>
+    <option value=''>--Select Frequency--</option>
                    {frequencys.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
+            <p>
+                    {frequencyErr ? (
+                      <span className="errormessage">Field is required</span>
+                    ) : (
+                      ''
+                    )}
+                  </p>
           </div>
           
           <div className="div">
-            <label className="label">Period* &nbsp;</label>
+            <label >Period &nbsp;</label>
             <br/>
-            <select name="period" className="form-control" required>
-              <option value=""disabled selected>--Select Month--</option>
+            <select name="period" className="form-control">
+              <option value="select month">--Select Month--</option>
               <option>January</option>
               <option>February</option>
               <option>March</option>
@@ -194,15 +277,24 @@ console.log(collection);
               <option>October-December</option>
             </select>
           </div>
+          </div>
+          <div className="content_1">
           <div className="div">
-            <label >Collection Type *&nbsp;</label>
+            <label className='label'>Collection Type* &nbsp;</label>
             <br />
-            <select name="collection" className="form-control"  id="collection" required>
-    <option value=""disabled selected>--Select Collection--</option>
+            <select value={collectionid} name="collection" className="form-control"  id="collection" onChange={(e) => {e.preventDefault();setCollectionid(e.target.value)}}>
+    <option value=''>--Select Collection--</option>
                    {collections.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
+            <p>
+                    {collectionErr ? (
+                      <span className="errormessage">Field is required</span>
+                    ) : (
+                      ''
+                    )}
+                  </p>
           </div>
         
           <div className="div">
@@ -228,7 +320,8 @@ console.log(collection);
             <br />
             <textarea name="qcte-name" className="form-control"></textarea>
           </div>
-          <div className="div">
+          </div>
+          <div className="div_1">
             <label className="ab-c">Auditor Id&nbsp;</label>
             <br />
             <textarea name="auditor-id" className="form-control"></textarea>
@@ -239,14 +332,15 @@ console.log(collection);
             <br />
             <textarea name="auditor-name" className="form-control"></textarea>
           </div>
-         
+         </form>
+        
           <div className="div">
             <br />
-            <button className="btn_1 btnsearch" onClick={searchRecord}>SEARCH</button>
+            <button className="btn_1 btnsearch" type="button" onClick={searchRecord}>SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2 resetbtn" type='reset'>RESET</button>
+            <button className="btn_2 resetbtn" onClick={resetRecord}s>RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_3 downloadbtn">EXPORT</button>
+            <button className="btn_3 downloadbtn" >EXPORT</button>
            
           </div>
         </div>
@@ -255,7 +349,7 @@ console.log(collection);
         
         
       </div>
-      </form>
+      
 
 
 
