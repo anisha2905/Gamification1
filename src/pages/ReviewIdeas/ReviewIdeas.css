@@ -24,7 +24,18 @@ padding-bottom: 10px;
 .div {
   float: left;
   margin-top: 10px;
-  margin-left: 11px;
+  margin-left: 10px;
+}
+
+.div2 {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.div3 {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .label {
@@ -61,7 +72,7 @@ padding-bottom: 10px;
 
 .form-control {
   height: 6vh;
-  width: 209px !important;
+  width: 200px !important;
  
 }
 

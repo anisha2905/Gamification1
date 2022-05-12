@@ -4,12 +4,15 @@ import TablePagination from '@mui/material/TablePagination'
 
 export default function ReviewIdeas1() {
   const [region, setRegion] = useState([])
-  const [country, setCountry] = useState([])
-  const [value, setValue] = useState([])
-  const [search, setSearch] = useState([])
   const [regionid, setRegionid] = useState('')
+  const [country, setCountry] = useState([])
+  const [value, setValue] = useState('')
+  const [collection, setCollection] = useState([])
+  const [coll, setColl] = useState('')
+  const [search, setSearch] = useState([])
   const [regionErr, setregionErr] = useState(false)
   const [countrynmErr, setcountrynmErr] = useState(false)
+  const [collectionErr, setcollectionErr] = useState(false)
 
   // Table Pagination
   const [page, setPage] = React.useState(0)
@@ -26,20 +29,24 @@ export default function ReviewIdeas1() {
 
   //Table Pagination
 
+  function resetRecord() {
+    document.getElementById('reviewideasform').reset()
+  }
+
   function expand() {
-    var configurationcontentid = document.getElementById('configurationcontent')
-    var containerfluidconfigurationid = document.getElementById(
-      'containerfluidconfiguration',
+    var reviewideas1contentid = document.getElementById('reviewideas1content')
+    var containerfluidreviewideas1id = document.getElementById(
+      'containerfluidreviewideas1',
     )
     var tableidnm = document.getElementById('tableid')
 
-    if (configurationcontentid.style.display === 'none') {
-      configurationcontentid.style.display = 'block'
-      containerfluidconfigurationid.style.marginTop = '156px'
+    if (reviewideas1contentid.style.display === 'none') {
+      reviewideas1contentid.style.display = 'block'
+      containerfluidreviewideas1id.style.marginTop = '200px'
       tableidnm.style.height = '219px'
     } else {
-      configurationcontentid.style.display = 'none'
-      containerfluidconfigurationid.style.marginTop = '0px'
+      reviewideas1contentid.style.display = 'none'
+      containerfluidreviewideas1id.style.marginTop = '0px'
       tableidnm.style.height = '350px'
     }
   }
@@ -76,13 +83,17 @@ export default function ReviewIdeas1() {
       regionid === 'null' ||
       regionid === '' ||
       value === 'null' ||
-      value === ''
+      value === '' ||
+      coll === 'null' ||
+      coll === ''
     ) {
       setcountrynmErr(true)
       setregionErr(true)
+      setcollectionErr(true)
     } else {
       setregionErr(false)
       setcountrynmErr(false)
+      setcollectionErr(false)
     }
     if (regionid === 'null' || regionid === '') {
       setregionErr(true)
@@ -94,13 +105,22 @@ export default function ReviewIdeas1() {
     } else {
       setcountrynmErr(false)
     }
+    if (coll === 'null' || coll === '') {
+        setcollectionErr(true)
+      } else {
+        setcollectionErr(false)
+      }
+  
     if (
       regionid === '' ||
       regionid === null ||
       typeof regionid === 'undefined' ||
       value === '' ||
       value === null ||
-      typeof value === 'undefined'
+      typeof value === 'undefined' ||    
+       coll === '' ||
+      coll === null ||
+      typeof coll === 'undefined'
     ) {
     } else {
       fetch(`http://localhost:3000/user?Countryname=${value}`, {
@@ -119,18 +139,12 @@ export default function ReviewIdeas1() {
         <div className="clusterTitleContainer">
           <h2 className="configTitle">Review Ideas</h2>
         </div>
-        <div>
-          <div className=" configurationcontent" id="configurationcontent">
-            <div>
-              <div
-                className=""
-                style={{
-                  marginBottom: '0px',
-                  marginTop: '10px',
-                  float: 'left',
-                  marginLeft: '10px',
-                }}
-              >
+        
+          <div className=" reviewideas1content" id="reviewideas1content">
+          <div className="div2">
+          <form id="reviewideasform">
+            <div className="div2">
+              <div className="div">
                 <label className="label">Region* &nbsp;</label>
                 <br />
 
@@ -149,11 +163,13 @@ export default function ReviewIdeas1() {
                     </option>
                   ))}
                 </select>
+                <p>
                 {regionErr ? (
                   <span className="errormessage">Field is required</span>
                 ) : (
                   ''
                 )}
+                </p>
               </div>
               
               <div className="div">
@@ -187,9 +203,19 @@ export default function ReviewIdeas1() {
                 <label className="label">Collection Type *&nbsp;</label>
                 <br />
                 <select name="period" className="form-control">
+                  <option>--Select collection--</option>
                   <option>RA</option>
                   <option>RES</option>
                 </select>
+                <p>
+                  {collectionErr ? (
+                    <span className="errormessage">Field is required</span>
+                  ) : (
+                    ''
+                  )}
+                  <br />
+                </p>
+               
               </div>
               <div className="div">
                 <label>Category&nbsp;</label>
@@ -199,11 +225,13 @@ export default function ReviewIdeas1() {
               <div className="div" >
                 <label>
                   Cluster Id&nbsp;
-                  <br />
                 </label>
+                <br/>
                 <select name="cluster-id" className="form-control"></select>
               </div>
-              <div  >
+              </div>
+
+              <div className="div3">
                 <label className="ab-c">Cluster Name&nbsp;</label>
                 <br />
                 <textarea
@@ -211,6 +239,7 @@ export default function ReviewIdeas1() {
                   className="form-control"
                 ></textarea>
               </div>
+              &nbsp; &nbsp; &nbsp; &nbsp;
               
               <div className="div">
                 <label className="ab-c">QCTE ID&nbsp;</label>
@@ -229,6 +258,7 @@ export default function ReviewIdeas1() {
                 <br />
                 <textarea name="auditor-id" className="form-control"></textarea>
               </div>
+              </form>
               &nbsp; &nbsp; &nbsp; &nbsp;
               <div className="div">
                 <br />
@@ -236,18 +266,17 @@ export default function ReviewIdeas1() {
                   Search
                 </button>
                 &nbsp; &nbsp;
-                <button className="btn_2 resetbtn">Reset</button>
+                <button className="btn_2 resetbtn" onClick={resetRecord}>Reset</button>
                 &nbsp; &nbsp;
                 <button className="btn_3 downloadbtn">EXPORT</button>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               </div>
-            </div>
           </div>
         </div>
         <div>
           <div
-            className="container-fluid containerfluidconfiguration"
-            id="configurationfluidcontent"
+            className="container-fluid containerfluidreviewideas1"
+            id="containerfluidreviewideas1"
           >
             <div className="col-lg-12 tablediv">
               <div>
@@ -264,7 +293,7 @@ export default function ReviewIdeas1() {
               </div>
 
               <div className="col-lg-12 div1" style={{ overflowX: 'auto' }}>
-                <table bordered="true">
+                <table bordered="true" id="tableid">
                   <thead>
                     <tr>
                       <th>Country(ID)</th>
