@@ -3,8 +3,12 @@ import './Configuration.css'
 import { Checkbox } from '@material-ui/core'
 import TablePagination from '@mui/material/TablePagination'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Configuration1() {
+
+  const [msg, setMsg] = useState(false);
   const [region, setRegion] = useState([])
   const [regionid, setRegionid] = useState('')
   const [country, setCountry] = useState([])
@@ -98,7 +102,71 @@ export default function Configuration1() {
       })
     }
   }
+//toast
+const notify = () =>{
+  if(
+    regionid === 'null' ||
+    regionid === '' ||
+    value === 'null' ||
+    value === ''
+  ) {
+    setcountrynmErr(true)
+    setregionErr(true)
+  } else {
+    setregionErr(false)
+    setcountrynmErr(false)
+  }
+  if (regionid === 'null' || regionid === '') {
+    setregionErr(true)
+  } else {
+    setregionErr(false)
+  }
+  if (value === 'null' || value === '') {
+    setcountrynmErr(true)
+  } else {
+    setcountrynmErr(false)
+  }
+  if (
+    regionid === '' ||
+    regionid === null ||
+    typeof regionid === 'undefined' ||
+    value === '' ||
+    value === null ||
+    typeof value === 'undefined'
+  ) 
+          {return (toast.error('Feild is Required', 
+              {   position: "bottom-right",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined
+              }))
+          } 
+          else if (fetch(`http://localhost:3000/user?Countryname=${value}`, {
+            method: 'GET',
+          }).then((result) => {
+            result.json().then((resp) => {
+              setSearch(resp)
+              console.log(resp)
+            })
+          }))
+          return (toast.success('Records are Available', {
+              position: "bottom-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              }))
+              setMsg(true);
+          
+};
 
+
+//toast
   function resetRecord() {
     document.getElementById('configform').reset()
   }
@@ -120,6 +188,12 @@ export default function Configuration1() {
       tableidnm.style.height = '350px'
     }
   }
+
+  const savebtn=(e)=>{
+    searchRecord();
+    notify();
+
+}
 
   return (
     <>
@@ -185,7 +259,7 @@ export default function Configuration1() {
                 </form>
                 
                 <div className="div">
-                  <button type="button"    className="btn_1 btnsearch" onClick={searchRecord}>
+                  <button type="button"    className="btn_1 btnsearch" onClick={savebtn}>
                     Search
                   </button>
                   &nbsp; &nbsp;
@@ -308,6 +382,7 @@ export default function Configuration1() {
               onRowsPerPageChange={handleChangeRowsPerPage}
             />
           </div>
+          <ToastContainer />
         </div>
         <div>
           <p className="nielsen-footer">

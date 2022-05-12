@@ -5,11 +5,14 @@ import { Checkbox } from '@material-ui/core'
 import TablePagination from '@mui/material/TablePagination'
 
 export default function Clusters() {
+
+
   // const [region, setRegion] = useState([])
   // const [regionid, setRegionid] = useState()
   // const [country, setCountry] = useState([])
   // const [value, setValue] = useState([])
   // const [search, setSearch] = useState([])
+  
 
   const [record, setRecord] = useState('')
   const [search, setSearch] = useState([])
@@ -201,6 +204,8 @@ export default function Clusters() {
               <form id="clusterform">
                 <div className="divnew">
                   <label className="label">Region* &nbsp;</label>
+                  
+                
                   <br />
                   <select
                     name="region"
