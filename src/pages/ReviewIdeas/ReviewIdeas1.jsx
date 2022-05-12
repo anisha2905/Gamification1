@@ -23,7 +23,7 @@ export default function ReviewIdeas1() {
   }
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value,5))
+    setRowsPerPage(parseInt(event.target.value,10))
     setPage(0)
   }
 
@@ -202,7 +202,9 @@ export default function ReviewIdeas1() {
               <div className="div">
                 <label className="label">Collection Type *&nbsp;</label>
                 <br />
-                <select name="period" className="form-control">
+                <select name="period" className="form-control" onChange={(e) => setColl(e.target.value)}
+                  value={coll}>
+
                   <option>--Select collection--</option>
                   <option>RA</option>
                   <option>RES</option>
@@ -311,7 +313,10 @@ export default function ReviewIdeas1() {
 
                   <tbody>
                     {search.length > 0 ? (
-                      search.map((item) => (
+                      search .slice(
+                        page * rowsPerPage,
+                        page * rowsPerPage + rowsPerPage,
+                      ).map((item) => (
                         <tr>
                           <td>{item.Country}</td>
                           <td>{item.QcteId}</td>
