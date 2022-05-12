@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import './Auditors.css'
 import TablePagination from '@mui/material/TablePagination'
+import { useForm } from 'react-hook-form';
 
 export default function Product() {
   const [region, setRegion]= useState([]);
@@ -9,9 +10,13 @@ export default function Product() {
   const [value, setValue] = useState('');
   const [search, setSearch] = useState([]);
   const [frequency, setFrequency]= useState([]);
+  const [frequencyid, setFrequencyid]= useState('')
   const [collection, setCollection]= useState([]);
+  const [collectionid,setCollectionid]= useState('')
   const [regionErr, setregionErr] = useState(false)
   const [countrynmErr, setcountrynmErr] = useState(false)
+  const [frequencyErr, setfrequencyErr]= useState(false)
+  const [collectionErr, setcollectionErr]= useState(false)
 
   // Table Pagination
   const [page, setPage] = React.useState(0)
@@ -109,13 +114,21 @@ console.log(collection);
       regionid === 'null' ||
       regionid === '' ||
       value === 'null' ||
-      value === ''
+      value === '' ||
+      frequencyid === 'null' ||
+      frequencyid === '' ||
+      collectionid ==='null'||
+      collectionid ===''
     ) {
       setcountrynmErr(true)
       setregionErr(true)
+      setfrequencyErr(true)
+      setcollectionErr(true)
     } else {
       setregionErr(false)
       setcountrynmErr(false)
+      setfrequencyErr(false)
+      setcollectionErr(false)
     }
     if (regionid === 'null' || regionid === '') {
       setregionErr(true)
@@ -127,13 +140,24 @@ console.log(collection);
     } else {
       setcountrynmErr(false)
     }
+    if (frequencyid === 'null' || frequencyid === '') {
+      setfrequencyErr(true)
+    } else {
+      setfrequencyErr(false)
+    }
     if (
       regionid === '' ||
       regionid === null ||
       typeof regionid === 'undefined' ||
       value === '' ||
       value === null ||
-      typeof value === 'undefined'
+      typeof value === 'undefined'||
+      frequencyid === '' ||
+      frequencyid === null ||
+      typeof frequencyid === 'undefined'||
+      collectionid === '' ||
+      collectionid === null ||
+      typeof collectionid === 'undefined'
     ) {
     } else {
       fetch(`http://localhost:3000/Auditors?Country=${value}`, {
@@ -166,8 +190,8 @@ console.log(collection);
           <div className="div">
             <label className="label">Region* &nbsp;</label>
             <br />
-            <select name="region" value={regionid} className="form-control" onChange={(e)=>{handleregion(e); setRegionid(e.target.value)}}>
-                   <option>--Select Region--</option>
+            <select name="region" value={regionid} className="form-control" onChange={(e)=>{handleregion(e); e.preventDefault();setRegionid(e.target.value)}}>
+                   <option value=''>--Select Region--</option>
                    {regions.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
@@ -184,8 +208,8 @@ console.log(collection);
           <div className="div">
             <label className="label">Country* &nbsp;</label>
             <br />
-            <select name="country" className="form-control" onChange={(e) => setValue(e.target.value)} id="country" value={value} >
-    <option>--Select Country--</option>
+            <select name="country" className="form-control" onChange={(e) =>{e.preventDefault();setValue(e.target.value)}} id="country" value={value} >
+    <option value=''>--Select Country--</option>
                    {country.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
@@ -213,14 +237,21 @@ console.log(collection);
           </div>
           
           <div className="div">
-            <label >Frequency &nbsp;</label>
+            <label className='label'>Frequency* &nbsp;</label>
             <br />
-            <select name="frequency" className="form-control" id="frequency">
-    <option value="Select Frequency">--Select Frequency--</option>
+            <select value={frequencyid}name="frequency" className="form-control" id="frequency" onChange={(e) =>{ e.preventDefault();setFrequencyid(e.target.value)}}>
+    <option value=''>--Select Frequency--</option>
                    {frequencys.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
+            <p>
+                    {frequencyErr ? (
+                      <span className="errormessage">Field is required</span>
+                    ) : (
+                      ''
+                    )}
+                  </p>
           </div>
           
           <div className="div">
@@ -249,14 +280,21 @@ console.log(collection);
           </div>
           <div className="content_1">
           <div className="div">
-            <label >Collection Type &nbsp;</label>
+            <label className='label'>Collection Type* &nbsp;</label>
             <br />
-            <select name="collection" className="form-control"  id="collection">
-    <option value="select collection">--Select Collection--</option>
+            <select value={collectionid} name="collection" className="form-control"  id="collection" onChange={(e) => {e.preventDefault();setCollectionid(e.target.value)}}>
+    <option value=''>--Select Collection--</option>
                    {collections.map(items => (
         <option key={items} value={items}>{items}</option>
         ))}
             </select>
+            <p>
+                    {collectionErr ? (
+                      <span className="errormessage">Field is required</span>
+                    ) : (
+                      ''
+                    )}
+                  </p>
           </div>
         
           <div className="div">
@@ -300,7 +338,7 @@ console.log(collection);
             <br />
             <button className="btn_1 btnsearch" type="button" onClick={searchRecord}>SEARCH</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
-            <button className="btn_2 resetbtn" onClick={resetRecord}>RESET</button>
+            <button className="btn_2 resetbtn" onClick={resetRecord}s>RESET</button>
             &nbsp; &nbsp; &nbsp; &nbsp;
             <button className="btn_3 downloadbtn" >EXPORT</button>
            
